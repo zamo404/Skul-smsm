@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 const ms = require('parse-ms');
 exports.run = async (client, message, args) => {   
-//== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
+
   
    let timeout = 15000;
    function rastgeleMiktar(min, max) {

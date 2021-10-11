@@ -4,7 +4,6 @@ const ms = require('parse-ms')
 exports.run = async (client, message, args) => {
   let para = db.fetch(`para_${message.author.id}`) 
   
-//=== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   let timeout = 7000;
   
   let crime = await db.fetch(`bahisoynama_${message.author.id}`)
@@ -56,7 +55,7 @@ The coin spins... <a:emoji_8:875044617253433404> tail and you lost it all...loos
       await db.set(`bahisoynama_${message.author.id}`, Date.now());   
       await db.add(`para_${message.author.id}`, -kaybettin);   
       } else { 
-//== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
+
           var kazandın = miktar*2
         var text2 = `**<@${message.author.id}> CoinFlip <a:emoji_62:874712880740712549> Choice win Or Lost**`;
           message.channel.send(text2).then(msg => {
@@ -67,11 +66,11 @@ The coin spins... <a:emoji_10:875044674535030794> coinflip win (win)**`);
           });
     await db.set(`bahisoynama_${message.author.id}`, Date.now());   
     await db.add(`para_${message.author.id}`, kazandın);    
-//== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
+
         }}}
 exports.conf = {
   enabled: true,
-  aliases: ["coinflip"-],
+  aliases: ["coinflip"-" cf"],
 };
 
 exports.help = {
