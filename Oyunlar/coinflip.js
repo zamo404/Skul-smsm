@@ -71,7 +71,7 @@ The coin spins... <a:emoji_10:875044674535030794> coinflip win (win)**`);
         }}}
 exports.conf = {
   enabled: true,
-  aliases: ["coinflip"],
+  aliases: ["coinflip"-],
 };
 
 exports.help = {

@@ -64,7 +64,7 @@ client.on("guildDelete", guild => {
 });
 //================================================================================\\
 client.on("message", message => {
-  if (message.content === ">help") {
+  if (message.content === "Jhelp") {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
       .setColor("c6df00")
@@ -86,13 +86,13 @@ client.on("message", message => {
 > fish(f)
 
 
- ┇Gif Commands**
+🕯 ┇Gif Commands**
 > anime - animel - boy
 > girl - baby - couple
 > smoke - sad - neon 
 
 
-> **<:emoji_91:870360971825254470> ┇Link**
+🔗 ┇Link**
 [Support]() - [Invite BOT](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) - [YouTube](coming soon) - [Website](coming soon)
 `);
     message.channel.send(embed);
@@ -114,7 +114,7 @@ client.on("message", message => {
 /////code lera dane 
 //===============================================================================\\
 client.on("message", message => {
-  if (message.content === ">bot") {
+  if (message.content === "Jbot") {
     const embed = new Discord.MessageEmbed().setColor("#ffff00")
       .setDescription(`
 > <a:emoji_21:872142528042917980> | Server
