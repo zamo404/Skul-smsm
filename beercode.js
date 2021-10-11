@@ -20,7 +20,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`>help |SMSM UP|Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Jhelp | Jungle |Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
 });//===============================================================================\\
@@ -234,3 +234,4 @@ client.load = command => {
 }; 
 //====================================================//
 
+client.login(process.env.TOKEN_BOT);
