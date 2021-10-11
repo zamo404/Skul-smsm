@@ -8,7 +8,7 @@ const express = require("express");
 const ayarlar = require("./ayarlar.json");
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.login("");
+client.login("NTE4ODQ4NjQ2MDE2NDAxNDM0.XAQddA.nWbmk8-lKkoD6nxIa2nkVd0RIq0");
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 
 //=== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
@@ -20,25 +20,10 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`>help | >invite |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`>help |SMSM UP|Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
-});
-//===============================================================================\\
-client.on("message", emprator => {
-  if (emprator.content === ">invite") {
-    emprator.channel.send(
-      "https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot"
-    );
-  }
-});
-//===============================================================================\\
-client.on("message", emprator => {
-  if (emprator.content === ">support") {
-    emprator.channel.send("https://discord.gg/DxytuacsyS");
-  }
-});
-//===============================================================================\\
+});//===============================================================================\\
 client.on("message", message => {
   if (message.guild) return;
   if (message.author.bot) return;
@@ -83,7 +68,7 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
       .setColor("c6df00")
-      .setAuthor("The Prefix { > }").setDescription(`
+      .setAuthor("The Prefix { J}").setDescription(`
 **<a:emoji_30:872142584875716689> ┇User Commands**
 > bot - avatar - server
 > invite - support - kick
@@ -113,29 +98,9 @@ client.on("message", message => {
 
 
 > **<:emoji_91:870360971825254470> ┇Link**
-[Support Bot](https://discord.gg/progresshome) - [Invite Kraken 🐙 Bot](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) - [YouTube](coming soon) - [Website](coming soon)
+[Support]() - [Invite BOT](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) - [YouTube](coming soon) - [Website](coming soon)
 `);
     message.channel.send(embed);
-  }
-});
-//===============================================================================\\
-client.on("message", msg => {
-  if (msg.content.startsWith(">clear")) {
-    let args = msg.content.split(" ").slice(1);
-
-    if (!msg.member.hasPermission("MANAGE_MESSAGES"))
-      return msg.channel.send("You can't use this command!");
-
-    if (!args[0])
-      return msg.channel.send("Specify how many messages you want to delete.");
-
-    msg.delete();
-
-    msg.channel.bulkDelete(args[0]).catch(e => {
-      msg.channel.send("You can only delete 100 messages at once.");
-    });
-
-    msg.channel.send(`Delete Message`).then(m => m.delete({ timeout: 5000 }));
   }
 });
 //===============================================================================\\
@@ -233,44 +198,7 @@ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
     message.channel.send(embed);
   }
 });
-//===============================================================================\\
-client.on("message", message => {
-  if (message.content === ">lock") {
-    if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
-    message.delete();
 
-    if (!message.channel.guild) return;
-
-    let bwan = new Discord.MessageEmbed()
-
-      .setFooter("Has Been Channel Lock")
-      .setColor("#ffff00");
-    message.channel.send(bwan);
-
-    message.channel.updateOverwrite(message.guild.id, {
-      SEND_MESSAGES: false
-    });
-  }
-});
-////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////client.on("message", message => { if (message.content === prefix + "lockall") 
-client.on("message", message => {
-  if (message.content === ">unlock") {
-    if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
-    message.delete();
-
-    if (!message.channel.guild) return message.reply("SORRY IM IN SERVER");
-    let bwan = new Discord.MessageEmbed()
-      .setFooter("Has Been Channel unlock")
-      .setColor("#ffff00");
-    message.channel.send(bwan);
-
-    message.channel.updateOverwrite(message.guild.id, {
-      SEND_MESSAGES: true
-    });
-  }
-});
 //===============================================================================\\
 client.on("message", async message => {
   if (message.content.startsWith(`<@${client.user.id}>`)) {
@@ -399,6 +327,6 @@ client.load = command => {
       reject(e);
     }
   });
-}; //== BEERCODE https://discord.gg/DxytuacsyS) BEERCODE ==\\
+}; 
 //====================================================//
 
