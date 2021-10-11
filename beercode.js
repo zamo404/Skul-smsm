@@ -68,33 +68,28 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
       .setColor("c6df00")
-      .setAuthor("The Prefix { J}").setDescription(`
-**<a:emoji_30:872142584875716689> ┇User Commands**
+      .setAuthor("The Prefix { J }").setDescription(`
+⚙ ┇User Commands**
 > bot - avatar - server
-> invite - support - kick
-> unlock - lock - role 
-> clear - server 
+> invite - support 
+> - role 
+> clear  
 
 
-**<:emoji_63:874713515502501960> ┇Economy Commands**
+💲 ┇Economy Commands**
 > daily(d) - cash(c) - work(w)
 > send - steal - shop(h)
 
 
-**<a:emoji_90:870361065786069012> ┇Game Comamnds**
+💸 ┇Game Comamnds**
 > coinflip(cf) - slots(s)
 > fish(f)
 
 
-**<a:emoji_19:870357283006205953> ┇Gif Commands**
+ ┇Gif Commands**
 > anime - animel - boy
-> girl - baby - coulpe
-> smoking - sad - neon - emoji
-
-
-**<:emoji_79:870361413644873798> ┇Photo Commands**
-> pgirl - pboy - pemoji
-> panime - pcoulpe
+> girl - baby - couple
+> smoke - sad - neon 
 
 
 > **<:emoji_91:870360971825254470> ┇Link**
@@ -104,47 +99,8 @@ client.on("message", message => {
   }
 });
 //===============================================================================\\
-client.on("message", russi => {
-  if (russi.content === ">server") {
-    let embed = new Discord.MessageEmbed()
-      .setTitle(`${russi.guild.name}`) ///Russi
-      .setThumbnail(client.user.avatarURL())
-      .setColor("#ffff00") ///Russi
-      .setFooter(`Requested | ${russi.author.tag}`, russi.author.avatarURL())
-      .addField("> 🆔 ID Server :", `${russi.guild.id}`)
-      .addField("> :crown: Owner Server :", `${russi.guild.owner}`)
-      .addField(
-        "> :calendar: Created : ",
-        `${russi.guild.createdAt.toLocaleString()}`
-      )
-      .addField(
-        "> <:emoji_87:870361195272630293> Members : ",
-        `${russi.guild.memberCount}`
-      )
-      .addField(
-        "> <:emoji_80:870361373895454800> Channels : ",
-        `${russi.guild.channels.cache.size}`
-      )
-      .addField("> <a:emoji_17:875044896619266049> Region : ", `${russi.guild.region}`)
-      .setTimestamp(); ///Russi
-    russi.channel.send(embed);
-  }
-});
-//===============================================================================\\
-client.on("message", habdo => {
-  if (habdo.content.startsWith(">kick")) {
-    if (!habdo.guild) return;
-    if (!habdo.member.hasPermission("KICK_MEMBERS"))
-      return habdo.reply("**You don t have a ram**");
-    let user = habdo.mentions.users.first();
-    if (!user) return habdo.reply("**Kick A Member User**");
-    habdo.guild.member(user).kick();
-    habdo.channel.send(`**✈ \`${user}\` Kicked from the server.**`);
-  }
-});
-//===============================================================================\\
 client.on("message", message => {
-  if (message.content.startsWith(">role")) {
+  if (message.content.startsWith("Jrole")) {
     var roles = message.guild.roles.cache
       .map(roles => `${roles.name}, `)
       .join(" ");
@@ -155,31 +111,7 @@ client.on("message", message => {
   }
 });
 //===============================================================================\\
-client.on("message", habdo => {
-  if (habdo.content.startsWith(">avatar")) {
-    var embed = new Discord.MessageEmbed()
-      .setAuthor(
-        `${habdo.author.username}`,
-        habdo.author.avatarURL({ dynamic: true })
-      )
-      .setColor("#ffff00")
-      .setDescription(
-        `**[Avatar Link](${habdo.author.avatarURL({
-          dynamic: true,
-          format: "png",
-          size: 1024
-        })})**`
-      )
-      .setImage(
-        habdo.author.avatarURL({ dynamic: true, format: "png", size: 1024 })
-      )
-      .setFooter(
-        `Requsted by ${habdo.author.tag}`,
-        habdo.author.avatarURL({ dynamic: true })
-      );
-    habdo.channel.send(embed);
-  }
-});
+/////code lera dane 
 //===============================================================================\\
 client.on("message", message => {
   if (message.content === ">bot") {
@@ -198,31 +130,6 @@ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
     message.channel.send(embed);
   }
 });
-
-//===============================================================================\\
-client.on("message", async message => {
-  if (message.content.startsWith(`<@${client.user.id}>`)) {
-    let help = new Discord.MessageEmbed()
-      .setColor("#ffff00")
-      .setThumbnail(
-        ``
-      )
-   .setAuthor(client.user.username, client.user.avatarURL()).setDescription(`
-   
-<a:emoji_21:872142528042917980> | Kraken Prefix (>)
-
-      
-<a:emoji_21:872142528042917980> | Kraken [Support](https://discord.gg/DxytuacsyS)
-
-<a:emoji_21:872142528042917980> | Krakem [Invite](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot)
-
-<a:emoji_21:872142528042917980> | Kraken [Website](coming soon)`);
-
-    message.channel.send(help);
-  }
-});
-//===============================================================================\\
-//===============================================================================\\
 //===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -256,9 +163,6 @@ client.load = command => {
     }
   });
 };
-
-//===============================================================================\\
-//===============================================================================\\
 //===============================================================================\\
 
 client.commands = new Discord.Collection();
