@@ -132,26 +132,7 @@ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 });
 //===============================================================================\\
 
-client.on("message", message => {
-  if (message.content.startsWith("Jbotinfo")) {
-\    var api = ${Math.round(client.ping)};
-    let botembed = new Discord.MessageEmbed()
-      .setThumbnail(message.author.avatarURL())
-      .setAuthor(${client.user.username} Information)
-      .setColor("RANDOM")
-      .addField("Bot Name",  \${client.user.username}`)
-      .addField("Created On",  `${client.user.createdAt}`)
-      .addField("Servers", `${client.guilds.cache.size}`)
-      .addField("Users", `${client.users.cache.size}`)
-      .addField("Channels", `${client.channels.cache.size}`)
-      .addField("Devs Bot", ` `)
-      .addField("Version", ` Version 12.4.0`)
-      .addField("Ping Bot", `${msg}ms.`)
-      .addField("Api Bot", `${api}ms.``)
-      .setTimestamp();
-    message.channel.send(botembed);
-  }
-});
+
 
 //===============================================================================\\
 client.commands = new Discord.Collection();
