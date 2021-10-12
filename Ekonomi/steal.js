@@ -65,7 +65,7 @@ db.add(`para_${message.author.id}`, -lostmoney)
 
   let embed = new Discord.MessageEmbed()
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
-   .setDescription(`<a:875051634386935880:897506842748530729> Robbery Successful, ${user}'you robbed and ${gotmoney} <a:emoji_25:870145821469966406> you won`)
+   .setDescription(`<a:875051634386935880:897506842748530729> Robbery Successful, ${user}'you robbed and ${gotmoney} <a:874712610396844135:897507318122565733> you won`)
    .setColor("GREEN")
 
    message.channel.send(embed)
