@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
   console.log(toplam)
   console.log(para.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')) 
   console.log(banka.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')) 
-//total: ${toplam.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}
+total: ${toplam.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}
   let balanceEmbed = new Discord.MessageEmbed()
     .setAuthor(user.tag, user.avatarURL({dynamic: true}))
     .setDescription(`**__Jungle Cash \💰__**\n**💵 | Balance : ${para.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}\n🏧 | Bank: ${banka.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')} \n📊 | total: ${toplam.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}**`)
