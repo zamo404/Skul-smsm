@@ -54,7 +54,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
             setTimeout(() => {
               msg.edit(`**
     ___SLOTS___  
-|${slots[result1]}${slots[result2]}${slots[result3]}${message.author.username}<a:emoji_10:870059089055592508> ${kazandin}+
+|${slots[result1]}${slots[result2]}${slots[result3]}${message.author.username}<a:813847731285393439:884402358640066640> ${kazandin}+
 |                  |
 |                  |**`,true);
             }, 3500);
@@ -65,14 +65,14 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   } else {
     var text3 = `**
     ___SLOTS___  
-|<a:emoji_56:872142091059355690><a:emoji_56:872142091059355690><a:emoji_56:872142091059355690>|${message.author.username}
+|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
 |                  |
 |                  |**`;
           message.channel.send(text3).then(msg => {
             setTimeout(() => {
               msg.edit(`**
     ___SLOTS___  
-|${slots[result1]}${slots[result2]}${slots[result3]}|${message.author.username}<a:emoji_8:870059060714700870> ${miktar}-
+|${slots[result1]}${slots[result2]}${slots[result3]}|${message.author.username}<a:870059060714700870:897458103681962074> ${miktar}-
 |                  |
 |                  |**`, true);
             }, 3500);
