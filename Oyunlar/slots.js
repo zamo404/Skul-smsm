@@ -8,24 +8,24 @@ exports.run = function(client, message,  args) {
   if(!miktar) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots** You Can't More Than <a:emoji_50:872142301789564969> 50,000`))
+      .setDescription(`**slots** You Can't More Than <a:813505315534405632:884402335823069274> 50,000`))
   //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 if(miktar > 50000) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots**You Can't More Than <a:emoji_50:872142301789564969> 50,000`))
+      .setDescription(`**slots**You Can't More Than <a:813505315534405632:884402335823069274> 50,000`))
   /////////////
 if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   .setColor("#ffff00")
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-  .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:emoji_50:872142301789564969> there is!' : 'you have no money!'}`))
+  .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:813505315534405632:884402335823069274> there is!' : 'you have no money!'}`))
   /////////////////
   if(isNaN(miktar) || miktar < 0) return message.channel.send(new Discord.MessageEmbed()
 .setColor("RED")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-.setDescription(`<a:emoji_50:872142301789564969> The amount you entered is not a valid number !?`))
+.setDescription(`<a:813505315534405632:884402335823069274> The amount you entered is not a valid number !?`))
  let kazandin = miktar*3   
-  let slots = ["<:emoji_60:872141904383455272>","<:emoji_61:872141800482160641>","<:emoji_58:872142048680091670>","<:emoji_59:872142007471079445>"];
+  let slots = ["<:872141904383455272:897455192881131532>","<:872141800482160641:897455419130277908>","<:872142048680091670:897455656460767282>","<:872142007471079445:897456092576108564>"];
   //
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   let result1 = Math.floor((Math.random() * slots.length));
@@ -47,7 +47,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   if (slots[result1] === slots[result2] && slots[result2] === slots[result3] ) {
     var text2 = `**
     ___SLOTS___  
-|<a:emoji_56:872142091059355690><a:emoji_56:872142091059355690><a:emoji_56:872142091059355690>|${message.author.username}
+|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
 |                  |
 |                  |**`;
           message.channel.send(text2).then(msg => {
