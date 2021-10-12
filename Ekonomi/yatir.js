@@ -54,7 +54,7 @@ db.add(`bankapara_${message.author.id}`, miktar)
 }
 exports.conf = {
   enabled: true,
-  aliases: ["","addbank","ab"],
+  aliases: ["deposit","addbank","ab"],
 };
 
 exports.help = {
