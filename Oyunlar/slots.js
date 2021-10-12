@@ -54,8 +54,8 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
             setTimeout(() => {
               msg.edit(`**
     ___SLOTS___  
-|                  |
 |${slots[result1]}${slots[result2]}${slots[result3]}${message.author.username}<a:813847731285393439:884402358640066640> ${kazandin}+
+|                  |
 |                  |**`,true);
             }, 3500);
           });
@@ -72,8 +72,8 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
             setTimeout(() => {
               msg.edit(`**
     ___SLOTS___  
-|                  |
 |${slots[result1]}${slots[result2]}${slots[result3]}|${message.author.username}<a:870059060714700870:897458103681962074> ${miktar}-
+|                  |
 |                  |**`, true);
             }, 3500);
           });
