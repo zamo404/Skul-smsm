@@ -117,7 +117,7 @@ client.on("message", message => {
   if (message.content === "Jbot") {
     const embed = new Discord.MessageEmbed().setColor("#ffff00")
       .setDescription(`
-> <a:emoji_21:872142528042917980> | Server
+> <a:872142528042917980:897519867333320796> | Server
 ${client.guilds.cache.size}
 > <a:emoji_21:872142528042917980> | Channel
 ${client.channels.cache.size}
