@@ -17,7 +17,7 @@ let times = await db.fetch(`worktime_${message.author.id}`)
     message.channel.send(new Discord.MessageEmbed()
                         .setColor("GREEN")
                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-                        .setDescription(`<a:time_clock:863850499991142410> You Have A Cooldown For __daily__
+                        .setDescription(`<a:813403485902864435:884402355301412864> You Have A Cooldown For __daily__
                         
   **Time Left**
   
