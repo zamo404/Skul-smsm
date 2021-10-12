@@ -69,7 +69,7 @@ Send By ${message.author.username}`))
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["sn"," send"],
+  aliases: ["se"," send"],
   permLevel: 0
 };
 

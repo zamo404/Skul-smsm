@@ -36,7 +36,7 @@ db.set(`çalışmasüresi_${message.author.id}`, Date.now())
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 exports.conf = {
   enabled: true,
-  aliases: ["w","W"],
+  aliases: ["w","work"],
 };
 
 exports.help = {
