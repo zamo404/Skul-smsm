@@ -20,7 +20,7 @@ message.channel.send(new Discord.MessageEmbed()
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 exports.conf = {
   enabled: true,
-    aliases: ["cash","money",'credit','c','*cash'],
+    aliases: ["cash","money","c"],
 };
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 exports.help = {

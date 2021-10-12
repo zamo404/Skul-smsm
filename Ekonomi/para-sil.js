@@ -38,7 +38,7 @@ db.add(`para_${user.id}`,- money)
 
 exports.conf = {
   enabled: true,
-  aliases: ["deletecash"],
+  aliases: ["deletecash","removecash"],
 };
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 exports.help = {

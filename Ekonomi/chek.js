@@ -58,7 +58,7 @@ db.add(`bankapara_${message.author.id}`, -miktar)
 exports.conf = {
   enabled: true,///== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   guildOnly: false,
-  aliases: ["qs","o","ch"],
+  aliases: ["ch"],
   permLevel: 0
 };
 
