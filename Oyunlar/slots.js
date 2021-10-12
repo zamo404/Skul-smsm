@@ -47,8 +47,8 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   if (slots[result1] === slots[result2] && slots[result2] === slots[result3] ) {
     var text2 = `**
     ___SLOTS___  
-|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
 |                  |
+|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
 |                  |**`;
           message.channel.send(text2).then(msg => {
             setTimeout(() => {
@@ -65,8 +65,8 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   } else {
     var text3 = `**
     ___SLOTS___  
-|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
 |                  |
+|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
 |                  |**`;
           message.channel.send(text3).then(msg => {
             setTimeout(() => {
