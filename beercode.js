@@ -133,33 +133,26 @@ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 //===============================================================================\\
 
 client.on("message", message => {
-  if (message.content.startsWith(`${prefix}botinfo`)) {
-    if (cooldown.has(message.author.id)) {
-      return message.channel.send(`You have to wait 5 seconds`).then(m => {
-        m.delete({ timeout: cdtime * 600 });
-      });
-    }
-    cooldown.add(message.author.id);
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    const tnx = new Discord.MessageEmbed()
-      .setColor(client.color)
-      .addField("Name", `${client.user.tag}`, true)
-      .addField("Name", `${client.user.tag}`, true)
-      .addField("ID", `${client.user.id}`, true)
-      .addField("Version", `${process.version}`, true)
-      .addField("Guilds", `${client.guilds.cache.size} Guilds`, true)
-      .addField("Users", `${client.users.cache.size} Users`, true)
-      .addField(
-        "Ping",
-        `${Date.now() - message.createdTimestamp}` + "ms",
-        true
-      );
-
-    message.channel.send(tnx);
+  if (message.content.startsWith("Jbotinfo")) {
+\    var api = ${Math.round(client.ping)};
+    let botembed = new Discord.MessageEmbed()
+      .setThumbnail(message.author.avatarURL())
+      .setAuthor(${client.user.username} Information)
+      .setColor("RANDOM")
+      .addField("Bot Name",  \${client.user.username}`)
+      .addField("Created On",  `${client.user.createdAt}`)
+      .addField("Servers", `${client.guilds.cache.size}`)
+      .addField("Users", `${client.users.cache.size}`)
+      .addField("Channels", `${client.channels.cache.size}`)
+      .addField("Devs Bot", ` `)
+      .addField("Version", ` Version 12.4.0`)
+      .addField("Ping Bot", `${msg}ms.`)
+      .addField("Api Bot", `${api}ms.``)
+      .setTimestamp();
+    message.channel.send(botembed);
   }
 });
+
 //===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
