@@ -38,7 +38,7 @@ exports.run = async (client, message, args) => {
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("dfe600")
-      .setDescription(`They're Sold |<:872141904383455272:897455877110521867>|<:872141800482160641:897455419130277908>|<:872142048680091670:897455656460767282>|<:872142007471079445:897456092576108564>|- __${kazandın}__ Sold!💸`)
+      .setDescription(`They're Sold |🍒|🍉|🍌|🍇|🍎|🍆|- __${kazandın}__ Sold!💸`)
       message.channel.send(embed)   
      await db.set(`baliktutma_${message.author.id}`, Date.now());
     await db.add(`para_${message.author.id}`, kazandın);
@@ -46,7 +46,7 @@ exports.run = async (client, message, args) => {
         }}
 exports.conf = {
   enabled: true,
-  aliases: ["h"],
+  aliases: ["shop","sp"],
 };
 
 exports.help = {
