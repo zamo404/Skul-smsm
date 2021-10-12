@@ -132,27 +132,15 @@ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 });
 //===============================================================================\\
 
-  client.on('message', message => {
-    if (message.content.startsWith("قفل")) {
-        if (!message.member.hasPermission("MANAGE_CHANNELS")) return
-        let everyone = message.guild.roles.cache.find(m => m.name === '@everyone');
-        message.channel.createOverwrite(everyone, {
-            SEND_MESSAGES: false,
-        })
-        message.channel.send("**🔒 تم قفل الروم** ");
-    }
- });
+
+
 //===============================================================================\\
-client.on('message', message => {
-    if (message.content.startsWith("فتح")) {
-        if (!message.member.hasPermission("MANAGE_CHANNELS")) return
-        let everyone = message.guild.roles.cache.find(m => m.name === '@everyone');
-        message.channel.createOverwrite(everyone, {
-            SEND_MESSAGES: true,
-        })
-        message.channel.send(" **🔓 تم فتح الروم**  ")
-    }
-});
+
+
+
+//===============================================================================\\
+
+
 
 //===============================================================================\\
 client.commands = new Discord.Collection();
