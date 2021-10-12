@@ -20,7 +20,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Jhelp | Jungle |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Jhelp | Jungles |Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
 });//===============================================================================\\
