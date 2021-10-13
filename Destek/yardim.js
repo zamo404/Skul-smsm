@@ -4,7 +4,7 @@ let yardim = new Discord.MessageEmbed()
 .setTitle("JUNGLE | Command List")
 .setColor("#ffff00")
 .addField("__💰  Economy__",`
-*\`Jdaily\` - __You will earn between 2300-2700 with 24 hours intervals.__**
+*\`Jdaily\` - __You will earn between 5000-7000 with 24 hours intervals.__**
 **\`Jmoney\` - __You will see the person you tagged or your own money.__**
 **\`Jsend\` - __You send money to the user you tagged.__**
 **\`Jrob\` - __You make a robbery every 14 minutes.__**
@@ -36,9 +36,9 @@ let oyunlar = new Discord.MessageEmbed()
 .setTitle("__🎲  Game Commands__")
 .setColor("#ffff00")
 .setDescription(`
-**\`?bet\` - __You bet, lose money or win twice.__**
-**\`?slots\` - __You play slots, lose money or win double.__**
-**\`?fish\` - __You fish, you win or lose money randomly.__** 
+**\`Jcoinflip\` - __You bet, lose money or win twice.__**
+**\`Jslots\` - __You play slots, lose money or win double.__**
+**\`Jfish\` - __You fish, you win or lose money randomly.__** 
 `)//== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 let destek = new Discord.MessageEmbed()
 .setTitle("__💼  Support Commands__")
