@@ -4,12 +4,30 @@ let yardim = new Discord.MessageEmbed()
 .setTitle("ArtBot✨#5628  | Command List")//== BEERCODE (discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 .setColor("#ffff00")
 .addField("__💰  Economy__",`
-*\`n!daily\` - __You will earn between 2300-2700 with 24 hours intervals.__**
-**\`n!money\` - __You will see the person you tagged or your own money.__**
+*\`n!daily\` - __You will earn between 2300-2700 with 24 hours intervals.__** **\`n!money\` - __You will see the person you tagged or your own money.__**
 **\`n!send\` - __You send money to the user you tagged.__**
 **\`n!rob\` - __You make a robbery every 14 minutes.__**
 **\`n!Work\` - __You work at a random job and get a salary.__**
-**\`n!dep\` - __You deposit money into the bank from your own wallet.__**
+**\`nlient.on("message", message => {
+  if (message.guild) return;
+  if (message.author.bot) return;
+  var channel = client.channels.cache.get("869140130387083264");
+  if (!channel) return;
+  var embed = new Discord.MessageEmbed()
+    .setColor("#0000ff")
+    .setAuthor(message.author.username, message.author.displayAvatarURL())
+    .addField(
+      `✅ **New Suggestion**`,
+      `\`\`\`
+  ${message.content}\`\`\``
+    )
+    .setFooter(`${message.author.username}`)
+    .setThumbnail(message.author.displayAvatarURL())
+    .setTimestamp();
+  channel.send(embed).then(c => {
+    c.react("").then(() => c.react(""));
+  });
+});!dep\` - __You deposit money into the bank from your own wallet.__**
 **\`n!check\` - __You withdraw money from the bank to your own wallet.**
 **\`n!steal\` - __You steal money from the wallet of the person you tagged.__**
 `)
