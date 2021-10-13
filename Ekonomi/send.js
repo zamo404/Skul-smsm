@@ -59,7 +59,7 @@ if(miktar === 'all' || miktar === 'all') {
 .setDescription(`**__<a:875051634386935880:897506842748530729> Payment Transferred!__**
 
 You Paid ${etiket}
-Add Balance  __${miktar}+__
+Add Balance 💸 __${miktar}+__
 Send By ${message.author.username}`))
   db.add(`para_${etiket.id}`, miktar)
   db.add(`para_${message.author.id}`, -miktar)
