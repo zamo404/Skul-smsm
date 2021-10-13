@@ -28,7 +28,7 @@ let moneys = rastgeleMiktar(5000, 8000);
       message.channel.send(new Discord.MessageEmbed()
                    .setColor("YELLOW")
                    .setFooter('Jungle Daily')
-                   .setThumbnail('https://media.discordapp.net/attachments/859402172373925918/870071235248263168/image0.gif')
+                   .setThumbnail('https://media.discordapp.net/attachments/889817958086488074/897863524120936568/376cd78f534efc70562acd902db2752c.gif?width=533&height=400')
                    .setAuthor(`Daily Crate Claimed`)
                    .setDescription(`:moneybag:  __${moneys}__ was added to your balance`))
 
