@@ -84,10 +84,7 @@ client.on('message' , message => {
  .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
  .setDescription("Support Server" + `
  
-[LINK SERVER](https://discord.gg/vcK3BNtrNa)
-
-[VOTE BOT](https://discord.gg/Dcs29GG2)
-
+[Link Server](https://discord.gg/aZXReU8BUx)
 `);
 
   message.channel.send({embed});
@@ -109,13 +106,23 @@ client.on("message", async message => {
   }
 });
 //===============================================================================\\
+client.on("message", async message => {
+  if (message.channel.type === "dm") return;
+  if (message.author.bot) return;
+  if (!message.guild) return;
+  if (!message.member)
+    message.member = await message.guild.fetchMember(message);
 
-client.on("messageCreate", basel => { 
- if(basel.content === `<@${client.user.id}>`) { 
- basel.reply({ content: `welcome im ${client.user.tag} my prefix is J`}) //فينك تغير رد 
-   }
+  if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
+    return message.channel.send(`Welcome Im <@518848646016401434> My prefix is { J }`);
+  }
 });
-
+//===============================================================================\\
+client.on('ready', async() => {
+        client.channels.cache.get('896802709007642737').send("hello")
+        client.channels.cache.get('ايدي الروم الصوتي').join()
+        console.log("Hello Im Online")
+});
 //===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
