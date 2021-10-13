@@ -119,8 +119,8 @@ client.on("message", async message => {
 });
 //===============================================================================\\
 client.on('ready', async() => {
-        client.channels.cache.get('896802709007642737').send("hello")
-        client.channels.cache.get('ايدي الروم الصوتي').join()
+        client.channels.cache.get('896802709007642737').send("Hello Im Online")
+        client.channels.cache.get('877990365993525277').join()
         console.log("Hello Im Online")
 });
 //===============================================================================\\
@@ -206,8 +206,7 @@ fs.readdir("./Oyunlar/", (err, files) => {
     });
   });
 });
-//== BEERCODE (https://discord.gg/DxytuacsyS) BEERCODE ==\\
-
+//===============================================================================\\
 client.load = command => {
   return new Promise((resolve, reject) => {
     try {
