@@ -22,19 +22,19 @@ client.on("ready", async () => {
   });
 });//===============================================================================\\
 client.on("guildCreate", guild => {
-  client.channels.cache.get("870341021186265188").send(`
-✅ **Join Server**: ${client.guilds.cache.size}
-🔠 **Server Name**: ${guild.name}
-👑 **Server Owner**: ${guild.owner}
+  client.channels.cache.get("897813492768309258").send(`
+<:IconJoin:897811847305134122> **Join Server**: ${client.guilds.cache.size}
+<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
+<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
 <:IconID:897811847426756650> **Server Id**: ${guild.id}
 <:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}**`);
 });
 ////////////////////////////////////////////
 client.on("guildDelete", guild => {
-  client.channels.cache.get("870341021186265188").send(`
-❎ **Lift Server**: ${client.guilds.cache.size}
-🔠 **Server Name**: ${guild.name}
-👑 **Server Owner**: ${guild.owner}
+  client.channels.cache.get("897813492768309258").send(`
+<:IconLeave:897811847682592799> **Lift Server**: ${client.guilds.cache.size}
+<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
+<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
 <:IconID:897811847426756650> **Server Id**: ${guild.id}
 <:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}**`);
 });
