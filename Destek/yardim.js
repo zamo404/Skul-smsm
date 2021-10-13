@@ -1,12 +1,12 @@
 const Discord = require('discord.js')
-exports.run = function(client, message, args) {//== BEERCODE (discord.gg/ew3dpTu4Z5) BEERCODE ==\\
+exports.run = function(client, message, args) {
 let yardim = new Discord.MessageEmbed()
-.setTitle("ArtBot✨#5628  | Command List")//== BEERCODE (discord.gg/ew3dpTu4Z5) BEERCODE ==\\
+.setTitle("JUNGLE | Command List")
 .setColor("#ffff00")
 .addField("__💰  Economy__",`
-*\`n!daily\` - __You will earn between 2300-2700 with 24 hours intervals.__**
-**\`n!money\` - __You will see the person you tagged or your own money.__**
-**\`n!send\` - __You send money to the user you tagged.__**
+*\`Jdaily\` - __You will earn between 2300-2700 with 24 hours intervals.__**
+**\`Jmoney\` - __You will see the person you tagged or your own money.__**
+**\`Jsend\` - __You send money to the user you tagged.__**
 **\`n!rob\` - __You make a robbery every 14 minutes.__**
 **\`n!Work\` - __You work at a random job and get a salary.__**
 **\`n!dep\` - __You deposit money into the bank from your own wallet.__**
