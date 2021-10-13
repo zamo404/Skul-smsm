@@ -67,6 +67,55 @@ client.on("message", message => {
     message.channel.send(embed);
   }
 });
+
+client.on('message' , message => {
+
+ 
+
+  
+  if (message.content === "Jsupport") {
+
+        if(!message.channel.guild) return message.reply('**this command only for server**');
+
+     const embed = new Discord.MessageEmbed()
+
+ .setColor("RANDOM")
+
+ .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
+ .setDescription("Support Server" + `
+ 
+[LINK SERVER](https://discord.gg/vcK3BNtrNa)
+
+[VOTE BOT](https://discord.gg/Dcs29GG2)
+
+`);
+
+  message.channel.send({embed});
+
+   }
+
+});
+//===============================================================================\\
+client.on("message", async message => {
+  if (message.content.startsWith("Juptime")) {
+    let day = Math.floor(client.uptime / 86400000);
+    let oclock = Math.floor(client.uptime / 3600000) % 24;
+    let minte = Math.floor(client.uptime / 60000) % 60;
+    let second = Math.floor(client.uptime / 1000) % 60;
+
+    return message.channel.send(
+      `__Uptime:__\n${day}d ${oclock}h ${minte}m ${second}s`
+    );
+  }
+});
+//===============================================================================\\
+
+client.on("messageCreate", basel => { 
+ if(basel.content === `<@${client.user.id}>`) { 
+ basel.reply({ content: `welcome im ${client.user.tag} my prefix is J`}) //فينك تغير رد 
+   }
+});
+
 //===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
