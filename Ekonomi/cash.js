@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
 
 exports.conf = {
   enabled: true,
-  aliases: [" cash", "money", 'balance', 'c'],
+  aliases: ["cash", "money", 'balance', 'c'],
 };
 exports.help = {
   name: 'balance',
