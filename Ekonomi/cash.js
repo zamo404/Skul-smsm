@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
     .setAuthor(user.tag, user.avatarURL({dynamic: true}))
     .setDescription(`**__Jungle Cash \💰__**\n**💵 | Balance : ${para.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}\n🏧 | Bank: ${banka.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')} \n📊 | total: ${toplam.replace(/(\d)(?=(\d{3})+(\D|$))=/g, '$1 ')}**`)
     .setColor("RANDOM")
-    .setThumbnail('https://mir-s3-cdn-cf.behance.net/project_modules/disp/4e63c429762731.5602923da5ef6.gif')
+    .setThumbnail('https://media.discordapp.net/attachments/896802709007642737/897853036838420510/5badf72a895a0a9d6ff371ef364d56af.gif?width=541&height=406')
     .setFooter('💰 Balance Info!');
   message.channel.send(balanceEmbed);
 }
