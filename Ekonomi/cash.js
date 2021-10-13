@@ -10,22 +10,22 @@ exports.run = async (client, message, args) => {
   console.log(banka)
   if (!banka) banka = 0;
   let toplam = para + banka;
-  console.log(toplam)
+  console.log(toplam.replace(/(\d)(?=(\d{3})+(\D|$))=/g, '$1'))
   console.log(para.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')) 
-  console.log(banka.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')) 
-//total: ${toplam.replace(/(\d)(?=(\d{3})+(\D|$))=/g, '$1 ')}
+  console.log(banka.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')
+  );
   let balanceEmbed = new Discord.MessageEmbed()
     .setAuthor(user.tag, user.avatarURL({dynamic: true}))
     .setDescription(`**__Jungle Cash \💰__**\n**💵 | Balance : ${para.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')}\n🏧 | Bank: ${banka.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')} \n📊 | total: ${toplam.replace(/(\d)(?=(\d{3})+(\D|$))=/g, '$1 ')}**`)
     .setColor("RANDOM")
-    .setThumbnail('https://images-ext-2.discordapp.net/external/3aDNqvIalfpSMCDIAjaOUDp7ADX2Gpe1hGB0sbMLCEw/https/media.discordapp.net/attachments/852987040659931248/871313810441510922/image0.gif?width=541&height=406')
+    .setThumbnail('https://i.pinimg.com/originals/5b/ad/f7/5badf72a895a0a9d6ff371ef364d56af.gif')
     .setFooter('💰 Balance Info!');
   message.channel.send(balanceEmbed);
 }
 
 exports.conf = {
   enabled: true,
-  aliases: ["cash", "money", 'balance', 'c'],
+  aliases: ["cash", "money", 'balance',"CASH", 'c'],
 };
 exports.help = {
   name: 'balance',
