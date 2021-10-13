@@ -114,7 +114,7 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(`Welcome Im <@518848646016401434> My prefix is { J }`);
+    return message.channel.send(`Hi Im <@518848646016401434> My prefix is { J }`);
   }
 });
 //===============================================================================\\
