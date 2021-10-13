@@ -54,12 +54,12 @@ if(miktar === 'all' || miktar === 'all') {
 }  else { //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   message.channel.send(new Discord.MessageEmbed()
                 .setColor('GREEN')
-                .setThumbnail('https://media.discordapp.net/attachments/852987040659931248/870484993980391424/image0.gif')
+                .setThumbnail('https://media.discordapp.net/attachments/889817958086488074/897864885675884544/7bcba55187df137b234567a0337e27df.gif?width=533&height=400')
                 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
 .setDescription(`**__<a:875051634386935880:897506842748530729> Payment Transferred!__**
 
 You Paid ${etiket}
-Add Balance <a:874712610396844135:897507318122565733> __${miktar}+__
+Add Balance  __${miktar}+__
 Send By ${message.author.username}`))
   db.add(`para_${etiket.id}`, miktar)
   db.add(`para_${message.author.id}`, -miktar)
