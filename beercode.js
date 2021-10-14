@@ -20,7 +20,12 @@ client.on("ready", async () => {
   client.user.setActivity(`Jhelp | Beta %31 working |Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
-});//===============================================================================\\
+});
+//===============================================================================\\
+
+
+
+//===============================================================================\\
 client.on("guildCreate", guild => {
   client.channels.cache.get("897813492768309258").send(`
 <:IconJoin:897811847305134122> **Join Server**: ${client.guilds.cache.size}
