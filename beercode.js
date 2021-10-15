@@ -17,7 +17,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Jhelp |Beta  |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Jhelp | Beta %40 working |Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
 });
@@ -27,7 +27,7 @@ client.on("ready", async () => {
 
 //===============================================================================\\
 client.on("guildCreate", guild => {
-  client.channels.cache.get("897813492768309258").send(`
+  client.channels.cache.get("898680185170325616").send(`
 <:IconJoin:897811847305134122> **Join Server**: ${client.guilds.cache.size}
 <:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
 <:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
@@ -36,7 +36,7 @@ client.on("guildCreate", guild => {
 });
 ////////////////////////////////////////////
 client.on("guildDelete", guild => {
-  client.channels.cache.get("897813492768309258").send(`
+  client.channels.cache.get("898680185170325616").send(`
 <:IconLeave:897811847682592799> **Lift Server**: ${client.guilds.cache.size}
 <:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
 <:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
