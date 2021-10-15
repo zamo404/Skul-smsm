@@ -124,7 +124,7 @@ client.on("message", async message => {
 });
 //===============================================================================\\
 client.on('ready', async() => {
-        client.channels.cache.get('896802709007642737').send("Hello Im Online")
+        client.channels.cache.get('898681102351335468').send("Hello Im Online <a:logserver:891321228537782313>")
         client.channels.cache.get('877990365993525277').join()
         console.log("Hello Im Online")
 });
