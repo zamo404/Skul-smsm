@@ -60,12 +60,6 @@ client.on("message", message => {
 > coinflip(cf) - slots(s)
 > fish(f)
 
-
-🕯 ┇Gif Commands**
-> anime - boy - girl 
-> smoke - sad - neon 
-
-
 🔗 ┇Link**
 [Support]() - [Invite BOT](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) - [Website](coming soon)- [Vote](coming soon)
 `);
@@ -78,7 +72,7 @@ client.on('message' , message => {
  
 
   
-  if (message.content === "Jsupport") {
+  if (message.content === "Jinvite") {
 
         if(!message.channel.guild) return message.reply('**this command only for server**');
 
@@ -87,9 +81,9 @@ client.on('message' , message => {
  .setColor("RANDOM")
 
  .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
- .setDescription("Support Server" + `
+ .setDescription("Invite Bot" + `
  
-[Link Server](https://discord.gg/aZXReU8BUx)
+[Link Invite](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)
 `);
 
   message.channel.send({embed});
