@@ -54,11 +54,11 @@ client.on("message", message => {
 ⚙️ ┇ **Info Commands**
 > invite - uptime
 
-💲 ┇**Economy Commands**
+:dollar: ┇**Economy Commands**
 > daily(d) - cash(c) - work(w)
 > send - steal - shop(h)
 
-💸 ┇**Game Comamnds**
+🎰 ┇**Game Comamnds**
 > coinflip(cf) - slots(s)
 > fish(f)
 
