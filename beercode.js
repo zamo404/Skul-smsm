@@ -17,14 +17,13 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(
-    `Jhelp | Beta %40 working |Server,${client.guilds.cache.size}`,
-    {
-      type: "PLAYING"
-    }
-  );
+  client.user.setActivity(`Jhelp | Beta %40 working |Server,${client.guilds.cache.size}`, {
+    type: "PLAYING"
+  });
 });
 //===============================================================================\\
+
+
 
 //===============================================================================\\
 client.on("guildCreate", guild => {
@@ -62,7 +61,7 @@ client.on("message", message => {
 > fish(f)
 
 
-🕯 ┇Gif **
+🕯 ┇Gif Commands**
 > anime - boy - girl 
 > smoke - sad - neon 
 
@@ -74,30 +73,29 @@ client.on("message", message => {
   }
 });
 
-client.on("message", message => {
+client.on('message' , message => {
+
+ 
+
+  
   if (message.content === "Jsupport") {
-    if (!message.channel.guild)
-      return message.reply("**this command only for server**");
 
-    const embed = new Discord.MessageEmbed()
+        if(!message.channel.guild) return message.reply('**this command only for server**');
 
-      .setColor("RANDOM")
+     const embed = new Discord.MessageEmbed()
 
-      .setThumbnail(
-        client.user.avatarURL(
-          "https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"
-        )
-      )
-      .setDescription(
-        "Support Server" +
-          `
+ .setColor("RANDOM")
+
+ .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
+ .setDescription("Support Server" + `
  
 [Link Server](https://discord.gg/aZXReU8BUx)
-`
-      );
+`);
 
-    message.channel.send({ embed });
-  }
+  message.channel.send({embed});
+
+   }
+
 });
 //===============================================================================\\
 client.on("message", async message => {
@@ -121,18 +119,14 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(
-      `Hi Im <@518848646016401434> My prefix is { J }`
-    );
+    return message.channel.send(`Hi Im <@518848646016401434> My prefix is { J }`);
   }
 });
 //===============================================================================\\
-client.on("ready", async () => {
-  client.channels.cache
-    .get("898681102351335468")
-    .send("Hello Im Online <a:logserver:891321228537782313>");
-  client.channels.cache.get("894710155994873886").join();
-  console.log("Hello Im Online");
+client.on('ready', async() => {
+        client.channels.cache.get('898681102351335468').send("Hello Im Online <a:logserver:891321228537782313>")
+        client.channels.cache.get('894710155994873886').join()
+        console.log("Hello Im Online")
 });
 //===============================================================================\\
 client.commands = new Discord.Collection();
@@ -141,6 +135,8 @@ fs.readdir("./Destek/", (err, files) => {
   if (err) console.error(err);
   log(`${files.length} Installing support command...`);
   files.forEach(f => {
+   
+
     let props = require(`./Destek/${f}`);
     log(`Support Command Installed: ${props.help.name}.`);
     client.commands.set(props.help.name, props);
@@ -172,6 +168,8 @@ fs.readdir("./Ekonomi/", (err, files) => {
   if (err) console.error(err);
   log(`${files.length} Economy command Loading ...`);
   files.forEach(f => {
+    
+
     let props = require(`./Ekonomi/${f}`);
     log(`Economy Command Installed: ${props.help.name}.`);
     client.commands.set(props.help.name, props);
@@ -180,6 +178,7 @@ fs.readdir("./Ekonomi/", (err, files) => {
     });
   });
 });
+
 
 client.load = command => {
   return new Promise((resolve, reject) => {
@@ -196,6 +195,7 @@ client.load = command => {
   });
 };
 //===============================================================================\\
+
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
