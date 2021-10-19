@@ -63,7 +63,7 @@ client.on("message", message => {
 > fish(f)
 
 🔗 ┇**Link**
-[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) -  [Vote](coming soon)
+[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot) -  [Vote](coming soon)
 `);
     message.channel.send(embed);
   }
