@@ -17,7 +17,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Jhelp | Beta %40 working |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Jhelp|Prefix {J}| Beta |Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
 });
@@ -50,6 +50,8 @@ client.on("message", message => {
       .setThumbnail(client.user.avatarURL())
       .setColor("c6df00")
       .setAuthor("The Prefix { J }").setDescription(`
+
+
 
 💲 ┇Economy Commands**
 > daily(d) - cash(c) - work(w)
