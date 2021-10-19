@@ -48,22 +48,22 @@ client.on("message", message => {
   if (message.content === "Jhelp") {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
-      .setColor("c6df00")
+      .setColor("WHITE")
       .setAuthor("The Prefix { J }").setDescription(`
 
+⚙️ ┇ **Info Commands**
+> invite - uptime
 
-
-💲 ┇Economy Commands**
+💲 ┇**Economy Commands**
 > daily(d) - cash(c) - work(w)
 > send - steal - shop(h)
 
-
-💸 ┇Game Comamnds**
+💸 ┇**Game Comamnds**
 > coinflip(cf) - slots(s)
 > fish(f)
 
-🔗 ┇Link**
-[Support]() - [Invite BOT](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) - [Website](coming soon)- [Vote](coming soon)
+🔗 ┇**Link**
+[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) -  [Vote](coming soon)
 `);
     message.channel.send(embed);
   }
