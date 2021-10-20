@@ -222,6 +222,18 @@ client.load = command => {
     }
   });
 };
+
+client.on("guildCreate" , server => {
+
+if(server.memberCount < 100){
+
+server.leave()
+
+console.log("Leave Server -100 member")
+
+}
+
+});
 //====================================================//
 
 client.login(process.env.TOKEN_BOT);
