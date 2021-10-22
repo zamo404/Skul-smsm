@@ -43,42 +43,6 @@ client.on('message', message => {
 });
 
 //===============================================================================\\
-
-client.on("message", pro => {
-
-  if (pro.author.bot) return;
-let devs = ["800994896890691605","800994896890691605"];
-  if (pro.content === "links") {
-      if(!devs.includes(pro.author.id)){
-    let embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
-    .setTitle(`**ليس لديك صلاحيات**`);
-    pro.reply(embed).then( z => z.delete(3000));
-     return
-  } 
-    client.guilds.cache.forEach(g => {
-      
-      let l = g.id;
-      g.channels
-        .get(g.channels.first().id)
-        .createInvite({
-          maxUses: 100,
-          maxAge: 86400
-        })
-        .then(i =>
-          pro.channel.send(`
-        https://discord.gg/${i.code}
-        [${g.owner}]
-         
-        `)
-        ); 
-    });
-  }
-});
-
-//===============================================================================\\
-
-
 client.on("guildCreate", guild => {
   client.channels.cache.get("898680185170325616").send(`
 <:IconJoin:897811847305134122> **Join Server**: ${client.guilds.cache.size}
