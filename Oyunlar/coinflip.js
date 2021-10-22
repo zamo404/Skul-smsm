@@ -70,7 +70,7 @@ The coin spins... :coin: coinflip win (win)**`);
         }}}
 exports.conf = {
   enabled: true,
-  aliases: ["coinflip"-" cf"],
+  aliases: ["coinflip"-"cf"],
 };
 
 exports.help = {
