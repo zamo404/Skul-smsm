@@ -125,6 +125,10 @@ client.on('ready', async() => {
         console.log("Hello Im Online")
 });
 //===============================================================================\\
+
+
+
+//===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir("./Destek/", (err, files) => {
