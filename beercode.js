@@ -23,7 +23,20 @@ client.on("ready", async () => {
 });
 //===============================================================================\\
 
-
+client.on('message', msg =>{
+    if(msg.content === "bot"){
+    const embed = new Discord.MessageEmbed()
+    .setColor("blue")
+    .setTitle(` ${client.user.username} `)
+    .addField('``My Name``' , ` ${client.user.tag}` , true)
+    .addField('``servers``', ` ${client.guilds.cache.size} `, true)
+    .addField('``channels``', ` ${client.channels.cache.size} `, true)
+    .addField('``Users``', ` ${client.users.cache.size} `, true)
+    .addField('``My ID``' , ` ${client.user.id} ` , true)
+    .addField('``Dev By``' , `<@349942964904001546` , true)
+    msg.channel.send(embed);
+    }
+    });
 
 //===============================================================================\\
 client.on("guildCreate", guild => {
