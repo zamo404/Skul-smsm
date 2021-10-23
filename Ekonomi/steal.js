@@ -38,7 +38,7 @@ if (author !== null && timeout - (Date.now() - author) > 0) {
   if (author2 < 200) {
     return message.channel.send(moneyEmbed)
   }//== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
-var lostmoney = rastgeleMiktar(150,500)
+var lostmoney = rastgeleMiktar(500,1000)
   let moneyEmbed2 = new Discord.MessageEmbed()
   .setColor("RED")
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
@@ -61,7 +61,7 @@ db.add(`para_${message.author.id}`, -lostmoney)
     return message.channel.send(authorembed)
   }
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
-    let gotmoney = rastgeleMiktar(600,1200)
+    let gotmoney = rastgeleMiktar(500,2500)
 
   let embed = new Discord.MessageEmbed()
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
