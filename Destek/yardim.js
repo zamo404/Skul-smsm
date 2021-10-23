@@ -4,7 +4,7 @@ let yardim = new Discord.MessageEmbed()
 .setTitle("JUNGLE | Command List")
 .setColor("#ffff00")
 .addField("__💰  Economy__",`
-**\`Jdaily\` - __You will earn between 5000-7000 with 24 hours intervals.__**
+**\`Jdaily\` - __You will earn between 3000-5000 with 24 hours intervals.__**
 **\`Jmoney\` - __You will see the person you tagged or your own money.__**
 **\`Jsend\` - __You send money to the user you tagged.__**
 **\`Jrob\` - __You make a robbery every 14 minutes.__**
