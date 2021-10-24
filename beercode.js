@@ -191,7 +191,25 @@ client.on("message", message => {
 
 //================================================================================\\
 
-
+client.on('message', message => {
+    if(message.content === "Jabout") {
+        const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setDescription(`
+ 
+**__Jungle Bot__**
+ 
+<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+<a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
+<:news:891421920984178719> Owner Bot - <@349942964904001546>
+<:members:891422824294662164> Admin Bot - <@!800994896890691605>
+ 
+ 
+`)
+               message.channel.send(embed);
+           }
+});
 
 //===============================================================================\\
 client.on("message", async message => {
