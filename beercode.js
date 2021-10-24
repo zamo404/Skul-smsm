@@ -137,7 +137,7 @@ client.on('message' , message => {
 
 //================================================================================\\
 
-const monty = ["349942964904001546"] //id xot dane
+const smsm = ["349942964904001546"] //id xot dane
  
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -145,7 +145,7 @@ client.on('message', message => {
  
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!monty.includes(message.author.id)) return;
+      if (!smsm.includes(message.author.id)) return;
  
  
     if (message.content === ("Jleave")) {
