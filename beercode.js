@@ -23,24 +23,6 @@ client.on("ready", async () => {
 });
 //===============================================================================\\
 
-client.on('message', message => {
-  if (message.content.startsWith("bot")) {
-    message.channel.send({
-      embed: new Discord.RichEmbed()
-        .setAuthor(client.user.username, client.user.avatarURL)
-        .setThumbnail(client.user.avatarURL)
-        .setColor('RANDOM')
-        .setTitle('``Info The Bot`` ')
-        .addField('``My Ping``', `${Date.now() - message.createdTimestamp}` + 'MS', true)
-        .addField('``servers``', [client.guilds.size], true)
-        .addField('``channels``', ` ${client.channels.size} `, true)
-        .addField('``Users``', ` ${client.users.size} `, true)
-        .addField('``My Name``', ` ${client.user.tag} `, true)
-        .addField('``My ID``', ` ${client.user.id} `, true)
-        .addField('``My Prefix``', ` J `, true)
-    })
-  }
-});
 
 //===============================================================================\\
 client.on("guildCreate", guild => {
@@ -67,25 +49,7 @@ client.on("guildDelete", guild => {
 });
 //================================================================================\\
  
-client.on("message", prof => {
-  if (prof.content.startsWith("server")) {
-    var professor = new Discord.MessageEmbed()
-      .setAuthor(prof.guild.name)
-      .setThumbnail(prof.guild.iconURL())
-      .setTitle("**Info Server**")
-      .addField(" ⚠️| **Server Name:**", `${prof.guild.name}`)
-      .addField(" 👑| **Owner Server:**", `${prof.guild.owner}`)
-      .addField(" 🔰| **Server ID:**", `${prof.guild.id}`)
-      .addField(" ✅| **Created:**", `${prof.guild.createdAt.toLocaleString()}`)
-      .addField(" 🚦| **Members:**", `${prof.guild.memberCount}`)
-      .addField(" 🔳| **Channels:**", `${prof.guild.channels.cache.size}`)
-      .addField(" 🌐| **Region**:", `${prof.guild.region}`)
-      .addField(" **Roles:**", ` ${prof.guild.roles.cache.size}`)
-      .setFooter(`Requested | ${prof.author.tag}`, prof.author.avatarURL())
-      .setTimestamp();
-    prof.channel.send(professor);
-  }
-});
+
 
 //================================================================================\\
 
@@ -133,6 +97,19 @@ client.on('message' , message => {
    }
 
 });
+
+
+client.on('message',async message => {
+  if(message.content.startsWith("Juptime")) { 
+    let rozh= Math.floor(client.uptime / 86400000);
+    let katzhmer= Math.floor(client.uptime / 3600000) % 24;
+    let daqa= Math.floor(client.uptime / 60000) % 60;
+    let chrka= Math.floor(client.uptime / 1000) % 60;
+ 
+    return message.channel.send(`__Uptime:__\n${rozh}d ${katzhmer}h ${daqa}m ${chrka}s`);
+  }
+ 
+})
 
 
 //================================================================================\\
