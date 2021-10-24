@@ -149,9 +149,15 @@ client.on('message', async message => {
 })
 
 //================================================================================\\
-
-
-
+client.on("message", message => {
+  if (message.content === ";invite") {
+    let embed = new Discord.MessageEmbed()
+    .setColor("")
+    .setTitle("Invite the bot!")
+    .setDescription(`[invite]()`)
+    message.channel.send(embed);
+  }
+});
 //================================================================================\\
 
 
