@@ -135,9 +135,29 @@ client.on('message' , message => {
 });
 
 
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + client.on('message',async message => {
+  if(message.content.startsWith(prefix + "uptime")) { 
+    let rozh= Math.floor(client.uptime / 86400000);
+    let katzhmer= Math.floor(client.uptime / 3600000) % 24;
+    let daqa= Math.floor(client.uptime / 60000) % 60;
+    let chrka= Math.floor(client.uptime / 1000) % 60;
+ 
+    return message.channel.send(`__Uptime:__\n${rozh}d ${katzhmer}h ${daqa}m ${chrka}s`);
+  }
+ 
+  }"uptime")) { 
+    let rozh= Math.floor(client.uptime / 86400000);
+    let katzhmer= Math.floor(client.uptime / 3600000) % 24;
+    let daqa= Math.floor(client.uptime / 60000) % 60;
+    let chrka= Math.floor(client.uptime / 1000) % 60;
+ 
+    return message.channel.send(`__Uptime:__
+
+
 //================================================================================\\
 
-const monty = ["349942964904001546"] //id xot dane
+const smsm = ["349942964904001546"] //code botaka left daka la servaraka
  
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -145,7 +165,7 @@ client.on('message', message => {
  
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!monty.includes(message.author.id)) return;
+      if (!smsm.includes(message.author.id)) return;
  
  
     if (message.content === ("Jleave")) {
