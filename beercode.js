@@ -191,7 +191,96 @@ client.on("message", message => {
 
 //================================================================================\\
 
-
+client.on('message', message => {
+    if(message.content === "!about") {
+        const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setDescription(`
+ 
+**__Name & Meow Music#3229client.on('message', message => {
+    if(message.content === "!about") {
+        const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setDescription(`
+ 
+**__Name & Meow Music#3229__**
+ 
+<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+<a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
+<:news:891421920984178719> Developer Bot - <@792754963759235074>
+<:members:891422824294662164> Admin Bot - <@!569584003988979724>
+ 
+ 
+`)
+               message.channel.send(embed);
+           }
+})client.on('message', message => {
+    if(message.content === "!about") {
+        const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setDescription(`
+ 
+**__Name & Meow Music#3229__**
+ 
+<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+<a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
+<:news:891421920984178719> Developer Bot - <@792754963759235074>
+<:members:891422824294662164> Admin Bot - <@!569584003988979724>
+ 
+ 
+`)
+               message.channel.send(embed);
+           }
+}client.on('message', message => {
+    if(message.content === "!about") {
+        const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setDescription(`
+ 
+**__Name & Meow Music#3229__**
+ 
+<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+<a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
+<:news:891421920984178719> Developer Bot - <@792754963759235074>
+<:members:891422824294662164> Admin Bot - <@!569584003988979724>
+ 
+ 
+`)
+               message.channel.send(embed);
+           }
+client.on('message', message => {
+    if(message.content === "!about") {
+        const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setDescription(`
+ 
+**__Name & Meow Music#3229__**
+ 
+<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+<a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
+<:news:891421920984178719> Developer Bot - <@792754963759235074>
+<:members:891422824294662164> Admin Bot - <@!569584003988979724>
+ 
+ 
+`)
+               message.channel.send(embed);
+    }__**
+ 
+<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+<a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
+<:news:891421920984178719> Developer Bot - <@792754963759235074>
+<:members:891422824294662164> Admin Bot - <@!569584003988979724>
+ 
+ 
+`)
+               message.channel.send(embed);
+           }
+});
 
 //===============================================================================\\
 client.on("message", async message => {
