@@ -85,10 +85,6 @@ client.on("message", prof => {
 //================================================================================\\
 
 client.on('message' , message => {
-
- 
-
-  
   if (message.content === "Jinvite") {
 
         if(!message.channel.guild) return message.reply('**this command only for server**');
@@ -112,6 +108,26 @@ client.on('message' , message => {
 
 //================================================================================\\
 
+client.on('message' , message => {
+  if (message.content === "Jsupport") {
+
+        if(!message.channel.guild) return message.reply('**this command only for server**');
+
+     const embed = new Discord.MessageEmbed()
+
+ .setColor("RANDOM")
+
+ .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
+ .setDescription("Support Server" + `
+ 
+[Link Server](https://discord.gg/a9QvFY7te7)
+`);
+
+  message.channel.send({embed});
+
+   }
+
+});
 
 
 //================================================================================\\
