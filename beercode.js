@@ -61,73 +61,6 @@ client.on("guildDelete", guild => {
 <:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}**`);
 });
 //================================================================================\\
-
-client.on('message', async message => {
-    if (message.content === 'discord.js-v12') {
-        let pages = [
-            `**
-الكلام الي تبيه
-    **`,
-            `**
-الكلام الي تبيه
-    **`,
-            `**
-الكلام الي تبيه
-    **`,
-            `**
-الكلام الي تبيه
-    **`, `**
-الكلام الي تبيه
-    **`
-        ];
-        let page = 1;
- 
-        let embed = new Discord.MessageEmbed()
-            .setColor('00e8ff')
-            .setFooter(`Page ${page} of ${pages.length}`)
-            .setDescription(pages[page - 1]);
- 
-        message.channel.send(embed).then(msg => {
-            msg.react('◀').then(r => {
-                msg.react('▶');
- 
-                const backwardsFilter = (reaction, user) =>
-                    reaction.emoji.name === '◀' && user.id === message.author.id;
-                const forwardsFilter = (reaction, user) =>
-                    reaction.emoji.name === '▶' && user.id === message.author.id;
- 
-                const backwards = msg.createReactionCollector(backwardsFilter, {
-                    time: 2000000
-                });
-                const forwards = msg.createReactionCollector(forwardsFilter, {
-                    time: 2000000
-                });
- 
-                backwards.on('collect', r => {
-                    if (page === 1) return;
-                    page--;
-                    embed.setTitle('**Bot Orders**');
-                    embed.setDescription(pages[page - 1]);
-                    embed.setFooter(`Page ${page} of ${pages.length}`);
-                    msg.edit(embed);
-                    r.users.remove(message.author.id)
-                });
-                forwards.on('collect', r => {
-                    if (page === pages.length) return;
-                    page++;
-                    embed.setTitle('**Bot Orders**');
-                    embed.setDescription(pages[page - 1]);
-                    embed.setFooter(`Page ${page} of ${pages.length}`);
-                    msg.edit(embed);
-                    r.users.remove(message.author.id)
-                });
-            });
-        });
-    }
-});
-
-//================================================================================\\
-
  
 client.on("message", message => {
   if (message.content === "Jhelp") {
@@ -154,6 +87,8 @@ client.on("message", message => {
   }
 });
 
+//================================================================================\\
+
 client.on('message' , message => {
 
  
@@ -177,42 +112,6 @@ client.on('message' , message => {
 
    }
 
-});
-
-
-client.on('message', message => {
-  if (message.content.startwith("Juptime")) {
-        let totalSeconds = (client.uptime / 1000);
-        let days = Math.floor(totalSeconds / 86400);
-        totalSeconds %= 86400;
-        let hours = Math.floor(totalSeconds / 3600);
-        totalSeconds %= 3600;
-        let minutes = Math.floor(totalSeconds / 60);
-        let seconds = Math.floor(totalSeconds % 60);
-
-        const embed = new Discord.MessageEmbed()
-           .setTitle(`Uptime`)
-           .addField("Days", `${days}`)
-           .addField("Hours", `${hours}`)
-           .addField("Minutes", `${minutes}`)
-           .addField("Seconds", `${seconds}`)
-       message.channel.send(embed);
-  }
-});
-//===============================================================================\\
-client.on("message", async message => {
-  if (message.content.startsWith("Juptime")) {
-    const embed = new Discord.MessageEmbed()
-    let day = Math.floor(client.uptime / 86400000);
-    let oclock = Math.floor(client.uptime / 3600000) % 24;
-    let minte = Math.floor(client.uptime / 60000) % 60;
-    let second = Math.floor(client.uptime / 1000) % 60;
-  
-    return message.channel.send({embed});
-    
-      `__Uptime:__\n${day}d ${oclock}h ${minte}m ${second}s`
-   
-  }
 });
 //===============================================================================\\
 client.on("message", async message => {
