@@ -17,7 +17,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Jhelp|Prefix {J}| Beta |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Jhelp|Prefix {J}|To Verify|Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
 });
