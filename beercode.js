@@ -178,6 +178,27 @@ client.on('message' , message => {
    }
 
 });
+
+
+client.on('message', message => {
+  if (message.content.startwith("Juptime")) {
+        let totalSeconds = (client.uptime / 1000);
+        let days = Math.floor(totalSeconds / 86400);
+        totalSeconds %= 86400;
+        let hours = Math.floor(totalSeconds / 3600);
+        totalSeconds %= 3600;
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = Math.floor(totalSeconds % 60);
+
+        const embed = new Discord.MessageEmbed()
+           .setTitle(`Uptime`)
+           .addField("Days", `${days}`)
+           .addField("Hours", `${hours}`)
+           .addField("Minutes", `${minutes}`)
+           .addField("Seconds", `${seconds}`)
+       message.channel.send(embed);
+  }
+});
 //===============================================================================\\
 client.on("message", async message => {
   if (message.content.startsWith("Juptime")) {
