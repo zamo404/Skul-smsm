@@ -232,7 +232,6 @@ let devs = ["349942964904001546"];
         ); 
     });
   }
-});
 //===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
