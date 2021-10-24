@@ -44,13 +44,61 @@ client.on('message', message => {
 
 //===============================================================================\\
 client.on("guildCreate", guild => {
-  client.channels.cache.get("898680185170325616").send(`
-<:IconJoin:897811847305134122> **Join Server**: ${client.guilds.cache.size}
-<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
-<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
-<:IconID:897811847426756650> **Server Id**: ${guild.id}
-<:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}**`);
-});
+  let channel = client.channels.cache.get("885988731679551548");
+  let embed = new MessageEmbed().setColor("#FF0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle(client.on("guildCreate", guild => {
+  let channel = client.channels.cache.get("885988731679551548");
+  let embed = new MessageEmbed().setColor("#FF0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( )
+  .addField(" **Server Name**", ${guild.name})
+  .addField(" **Server Owner**", ${guild.owner})
+  .addField(" **Server Id**", ${guild.id})
+  .addField(" **Member Count**", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+});✅ )
+  .addField(" **Server Name**", ${guild.name})
+  .addField(" **Server Owner**", ${guild.owner})
+  .addField(" **Server Id**", ${guild.id})
+  .addField(" **Member Count**", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+});client.on("guildCreate", guild => {
+  let channel = client.channels.cache.get("885988731679551548");
+  let embed = new MessageEmbed().setColor("#FF0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( )
+  .addField(" **Server Name**", ${guild.name})
+  .addField(" **Server Owner**", ${guild.owner})
+  .addField(" **Server Id**", ${guild.id})
+  .addField(" **Member Count**", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+})client.on("guildCreate", guild => {
+  let channel = client.channels.cache.get("885988731679551548");
+  let embed = new MessageEmbed().setColor("#FF0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( )
+  .addField(" **Server Name**", ${guild.name})
+  .addField(" **Server Owner**", ${guild.owner})
+  .addField(" **Server Id**", ${guild.id})
+  .addField(" **Member Count**", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+}client.on("guildCreate", guild => {
+  let channel = client.channels.cache.get("885988731679551548");
+  let embed = new MessageEmbed().setColor("#FF0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( )
+  .addField(" **Server Name**", ${guild.name})
+  .addField(" **Server Owner**", ${guild.owner})
+  .addField(" **Server Id**", ${guild.id})
+  .addField(" **Member Count**", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+
 ////////////////////////////////////////////
 client.on("guildDelete", guild => {
   client.channels.cache.get("898680185170325616").send(`
