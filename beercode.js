@@ -181,14 +181,16 @@ client.on('message' , message => {
 //===============================================================================\\
 client.on("message", async message => {
   if (message.content.startsWith("Juptime")) {
+    const embed = new Discord.MessageEmbed()
     let day = Math.floor(client.uptime / 86400000);
     let oclock = Math.floor(client.uptime / 3600000) % 24;
     let minte = Math.floor(client.uptime / 60000) % 60;
     let second = Math.floor(client.uptime / 1000) % 60;
-
-    return message.channel.send(
+  
+    return message.channel.send({embed});
+    
       `__Uptime:__\n${day}d ${oclock}h ${minte}m ${second}s`
-    );
+   
   }
 });
 //===============================================================================\\
