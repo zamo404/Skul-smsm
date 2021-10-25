@@ -114,27 +114,112 @@ message.channel.send(embed)
 
 //================================================================================\\
 
-client.on("message", async baltra => {
-      if (baltra.content.startsWith(`ping`)) {
-        if (!baltra.channel.guild) return;
-        if (baltra.author.bot) return;
-        baltra.channel.send(`\`\`\`js
-    Time_Taken: ${Date.now() - baltra.createdTimestamp} ms :signal_strength:
-    Web_Socket: ${Math.round(client.ping)} ms :signal_strength:\`\`\``)
-      }
-    })
+client.on("message", message => {
+  if (message.author.bot) return;
+  if (message.content.startsWith("Jping")) {
+    message.channel.send("pong | :ping_pong: ").then(msg => {
+      var PinG = `${Date.now() - msg.createdTimestamp}`;
+      var ApL = `${Math.round(client.ping)}`;
+      msg.edit(`\`\`\`javascript\nTime taken: ${PinG} ms.\`\`\``);
+    });
+  }
+});
 
 //================================================================================\\
 
-
+client.on(`message`, message => {
+    if (message.content.startsWith("server")) {
+        if (!message.channel.guild) return message.channel.send('This is for servers only');
+ 
+        const text = message.guild.channels.cache.filter(r => r.type === "text").size
+        const voice = message.guild.channels.cache.filter(r => r.type === "voice").size
+        const chs = message.guild.channels.cache.size
+        const avaibles = message.guild.features.map(features => features.toString()).join("\n")
+ 
+        const roles = message.guild.roles.cache.size
+ 
+        const online = message.guild.members.cache.filter(m =>
+            m.presence.status === 'online'
+        ).size
+ 
+        const idle = message.guild.members.cache.filter(m =>
+            m.presence.status === 'idle'
+        ).size
+ 
+        const offline = message.guild.members.cache.filter(m =>
+            m.presence.status === 'offline'
+        ).size
+ 
+        const dnd = message.guild.members.cache.filter(m =>
+            m.presence.status === 'dnd'
+        ).size
+ 
+        const black = new Discord.MessageEmbed()
+            .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
+            .setColor('BLACK')
+            .addFields({
+                name: `🆔 Server ID`,
+                value: `${message.guild.id}`,
+                inline: true
+ 
+            }, {
+                name: `📆 Created On`,
+                value: moment(message.guild.createdAt).format("YYYY/MM/DD, HH:mm") + '\n' + moment(message.guild.createdAt, "YYYYMMDD").fromNow(),
+                inline: true
+            }, {
+                name: `👑 Owner By`,
+                value: `${message.guild.owner}`,
+                inline: true
+ 
+            }, {
+                name: `👥 Members (${message.guild.memberCount})`,
+                value: `**${online}** Online \n **${message.guild.premiumSubscriptionCount}** Boosts ✨`,
+                inline: true
+            }, {
+                name: `💬 Channels (${chs})`,
+                value: `**${text}** Text | **${voice}** Voice`,
+                inline: true
+            }, {
+                name: `🌍 Others`,
+                value: `**Region:** ${message.guild.region}\n**Verification Level:** ${message.guild.mfaLevel}`,
+                inline: true
+            }, {
+                name: `🔐 Roles (${roles})`,
+                value: `To see a list with all roles use #roles`,
+                inline: true
+            }, )
+            .setFooter('Developer Support', message.author.avatarURL())
+        message.channel.send(black)
+    }
+});
 
 //================================================================================\\
 
-
+ client.on('message',async message => {
+  if(message.content.startsWith("avatar")) {
+ 
+    let args = message.content.split(" ").slice(1).join(" ");   
+   let member = message.mentions.users.first() || message.author
+    let avatar = member.displayAvatarURL({size: 1024})
+      const embed = new Discord.MessageEmbed()
+        .setTitle(`${member.username}'s avatar`)
+        .setImage(avatar)
+        .setColor("BLACK")
+        message.channel.send(embed);
+    
+  }}) 
 
 //================================================================================\\
 
-
+client.on('guildCreate', guild => {
+var embed = new Discord.RichEmbed()
+  .setColor("#0073fa")
+  .setDescription(`
+> Thank you for adding me 
+> My Prefix : \`J\`
+> For Help type : \`Jhelp\``)
+      guild.owner.send(embed)
+});
 
 //================================================================================\\
 
@@ -177,13 +262,13 @@ client.on('message', message => {
 **__About Bot__**
  
 <:IconStatusWebOnline:897811847724531722> **Servers** - **__${client.guilds.cache.size}__**
-                                           ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
 <:IconStaff:897811847728754718> **Users** - **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}__**
-                                 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
 <:828229201307369492:884402335319724062> **Channels** - **__${client.channels.cache.size}__**
-                                          ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
 <:IconCrown:897812868236455946> **Owner Bot** - <@349942964904001546>
-                                 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
 <:Devloper:902181949110636574> **Admin Bot** - <@800994896890691605>
 
 `)
