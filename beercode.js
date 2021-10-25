@@ -101,7 +101,7 @@ client.on('message', message => {
 if(message.content == 'Jmembers') {
 const embed = new Discord.MessageEmbed()
  .setColor("RANDOM")
-.setDescription(`**Member cases <:IconStatusWebOnline:897811847724531722>
+.setDescription(`**Member cases <:Servers:902312906618724372>
 <:onlines:895398659389292625> Online ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
 <:dnd:895398659217309737> Do Not Disturb ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
 <:sleep:895398659284434945> Idle ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
@@ -248,13 +248,13 @@ client.on('message', message => {
  
 **__About Bot__**
  
-<:IconStatusWebOnline:897811847724531722> **Servers** - **__${client.guilds.cache.size}__**
+<:Servers:902312906618724372> **Servers** - **__${client.guilds.cache.size}__**
 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
-<:IconStaff:897811847728754718> **Users** - **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}__**
+<:Users:902312879838068796> **Users** - **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}__**
 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
-<:828229201307369492:884402335319724062> **Channels** - **__${client.channels.cache.size}__**
+<:channels:895398664468594739> **Channels** - **__${client.channels.cache.size}__**
 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
-<:IconCrown:897812868236455946> **Owner Bot** - <@349942964904001546>
+<:owner:902312748371820594> **Owner Bot** - <@349942964904001546>
 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ
 <:Devloper:902181949110636574> **Admin Bot** - <@800994896890691605>
 
@@ -381,11 +381,11 @@ client.load = command => {
 
 client.on("guildCreate" , server => {
 
-if(server.memberCount < 200){
+if(server.memberCount < 0){
 
 server.leave()
 
-console.log("Leave Server -200 member")
+console.log("Leave Server -0 member")
 
 }
 

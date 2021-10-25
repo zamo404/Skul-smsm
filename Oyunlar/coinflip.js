@@ -48,7 +48,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
         var text2 = `**<@${message.author.id}> CoinFlip <a:854073741520666644:897455060928323585> Choice win Or Lost**`;
           message.channel.send(text2).then(msg => {
             setTimeout(() => {
-              msg.edit(`**<@${message.author.id}>spent cowoncy ${-kaybettin} <:897511163456258048:897515669573214229> and chose heads
+              msg.edit(`**<@${message.author.id}>spent cowoncy ${-kaybettin} <a:coinflip:897450914196099092> and chose heads
 The coin spins... :coin: tail and you lost it all...loose (loose)**`);
             }, 3000);
           });
