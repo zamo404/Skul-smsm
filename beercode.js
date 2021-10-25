@@ -22,34 +22,26 @@ client.on("ready", async () => {
   });
 });
 //===============================================================================\\
-
-
-//===============================================================================\\
 client.on("guildCreate", guild => {
   client.channels.cache.get("898680185170325616").send(`
-🔵 **Join Server**: ${client.guilds.cache.size}
-🔠 **Server Name**: ${guild.name}
-👑 **Server Owner**: ${guild.owner}
-🕵️‍♂️ **Owner  Id**: ${guild.owner.id}
-🆔 **Server Id**: ${guild.id}
-👥 **Member Count**: ${guild.memberCount}`);
+<:IconJoin:897811847305134122> **Join Server**: ${client.guilds.cache.size}
+<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
+<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
+<:IconID:897811847426756650> **Owner  Id**: ${guild.owner.id}
+<:IconID:897811847426756650> **Server Id**: ${guild.id}
+<:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}`);
 });
 ////////////////////////////////////////////
 client.on("guildDelete", guild => {
   client.channels.cache.get("898680185170325616").send(`
- 🔴 **Lift Server**: ${client.guilds.cache.size}
- 🔠 **Server Name**: ${guild.name}
- 👑 **Server Owner**: ${guild.owner}
- 🕵️‍♂️ **Owner Id**: ${guild.owner.id}
- 🆔 **Server Id**: ${guild.id}
- 👥 **Member Count**: ${guild.memberCount}`);
+<:IconLeave:897811847682592799> **Lift Server**: ${client.guilds.cache.size}
+<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
+<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
+<:IconID:897811847426756650> **Owner Id**: ${guild.owner.id}
+<:IconID:897811847426756650> **Server Id**: ${guild.id}
+<:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}`);
 });
 //================================================================================\\
- 
-
-
-//================================================================================\\
-
 client.on('message' , message => {
   if (message.content === "Jinvite") {
 
@@ -70,10 +62,7 @@ client.on('message' , message => {
    }
 
 });
-
-
 //================================================================================\\
-
 client.on('message' , message => {
   if (message.content === "Jsupport") {
 
@@ -107,24 +96,23 @@ client.on('message',async message => {
   }
  
 })
-
-
 //================================================================================\\
 
-client.on('guildCreate', guild => {
-var embed = new Discord.RichEmbed()
-  .setColor("#0073fa")
-  .setDescription(`
-> Thank you for adding me 
-> My Prefix : \`J\`
-> For Help type : \`Jhelp\``)
-      guild.owner.send(embed)
-});
+
 
 //================================================================================\\
 
 
 
+//================================================================================\\
+
+
+
+//================================================================================\\
+
+
+
+//================================================================================\\
 client.on("message", message => {
   if (message.content === "Jhelp") {
     const embed = new Discord.MessageEmbed()
@@ -149,9 +137,7 @@ client.on("message", message => {
     message.channel.send(embed);
   }
 });
-
 //================================================================================\\
-
 client.on('message', message => {
     if(message.content === "Jabout") {
         const embed = new Discord.MessageEmbed()
@@ -171,7 +157,6 @@ client.on('message', message => {
                message.channel.send(embed);
            }
 });
-
 //===============================================================================\\
 client.on("message", async message => {
   if (message.channel.type === "dm") return;
@@ -190,8 +175,6 @@ client.on('ready', async() => {
         client.channels.cache.get('894710155994873886').join()
         console.log("Hello Im Online")
 });
-//===============================================================================\\
-
 //===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
