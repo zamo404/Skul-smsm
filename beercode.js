@@ -109,18 +109,14 @@ client.on('message',async message => {
 
 //================================================================================\\
 
-client.on('message', message => {
-if(message.content == 'members') {
-const embed = new Discord.MessageEmbed()
-.setDescription(`**حالات الاعضاء🔋
-💚 اونلاين${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
-❤️ مشغول${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
-💛 خامل${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
-🖤 اوفلاين${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
-💙 الكل${message.guild.memberCount}**`)
-message.channel.send(embed)
-
-}
+client.on('guildCreate', guild => {
+var embed = new Discord.RichEmbed()
+  .setColor("#0073fa")
+  .setDescription(`
+> Thank you for adding me 
+> My Prefix : \`J\`
+> For Help type : \`Jhelp\``)
+      guild.owner.send(embed)
 });
 
 //================================================================================\\
