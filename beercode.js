@@ -195,7 +195,51 @@ client.on(`message`, message => {
 
 //================================================================================\\
 
+const monty = ["349942964904001546"] //id xot dane
 
+ 
+
+const montyprefix = "J";
+
+client.on('message', message => {
+
+    var argresult = message.content.split( ).slice(1).join(' ');
+
+ 
+
+ 
+
+client.on('message', message => {
+
+    var argresult = message.content.split( ).slice(1).join(' ');
+
+      if (!monty.includes(message.author.id)) return;
+
+ 
+
+ 
+
+    if (message.content === (montyprefix +"Jleave")) {
+
+    message.guild.leave();        
+
+ message.channel.send('DONE')
+
+ 
+
+ 
+
+    } 
+
+ 
+
+})
+
+ 
+
+ 
+
+})
 
 //================================================================================\\
 
