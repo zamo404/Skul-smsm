@@ -102,7 +102,7 @@ if(message.content == 'Jmembers') {
 const embed = new Discord.MessageEmbed()
  .setColor("RANDOM")
 .setDescription(`**Member cases <:IconStatusWebOnline:897811847724531722>
-<:729181184193462285:895398659389292625> Online ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
+<:onlines:895398659389292625> Online ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
 <:729181212530442311:895398659217309737> Do Not Disturb ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
 <:729181121933475931:895398659284434945> Idle ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
 <:729181162182017051:895398658969862245> Offline ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
@@ -195,51 +195,6 @@ client.on(`message`, message => {
 
 //================================================================================\\
 
-const monty = ["349942964904001546"] //id xot dane
-
- 
-
-const montyprefix = "J";
-
-client.on('message', message => {
-
-    var argresult = message.content.split( ).slice(1).join(' ');
-
- 
-
- 
-
-client.on('message', message => {
-
-    var argresult = message.content.split( ).slice(1).join(' ');
-
-      if (!monty.includes(message.author.id)) return;
-
- 
-
- 
-
-    if (message.content === ("Jleave")) {
-
-    message.guild.leave();        
-
- message.channel.send('DONE')
-
- 
-
- 
-
-    } 
-
- 
-
-})
-
- 
-
- 
-
-})
 
 //================================================================================\\
 
