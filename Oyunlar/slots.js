@@ -84,6 +84,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
 exports.conf = {
   enabled: true,
   guildOnly: true,
+  slowmode: 5,
   aliases: ["slot","s","slotmachine"],
   permLevel: 2
 };
