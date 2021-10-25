@@ -113,11 +113,19 @@ message.channel.send(embed)
 
 //================================================================================\\
 
-
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`رساله لما يخش السيرفر تتبعتلو`)
+}).catch(console.error)
+})
 
 //================================================================================\\
 
-
+client.on("guildMemberRemove", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`رساله لما يخرج من السيرفر تتبعتلو`)
+}).catch(console.error)
+})
 
 //================================================================================\\
 
