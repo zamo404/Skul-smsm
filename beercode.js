@@ -114,7 +114,47 @@ message.channel.send(embed)
 
 //================================================================================\\
 
-
+client.on('message', (message) => {
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3;
+    if (!(message === null || message === void 0 ? void 0 : message.guild) || !(message === null || message === void 0 ? void 0 : message.member) || ((_a = message === null || message === void 0 ? void 0 : message.author) === null || _a === void 0 ? void 0 : _a.bot))
+        return;
+    if ((_c = (_b = message === null || message === void 0 ? void 0 : message.content) === null || _b === void 0 ? void 0 : _b.toLowerCase()) === null || _c === void 0 ? void 0 : _c.startsWith(`device`)) {
+        const args = (_d = message === null || message === void 0 ? void 0 : message.content) === null || _d === void 0 ? void 0 : _d.split(' ');
+        if (!args[1])
+            return (_e = message === null || message === void 0 ? void 0 : message.channel) === null || _e === void 0 ? void 0 : _e.send('Enter the user you want to see his/her device!');
+        args.shift();
+        let device = '';
+        const member = ((_g = (_f = message === null || message === void 0 ? void 0 : message.mentions) === null || _f === void 0 ? void 0 : _f.members) === null || _g === void 0 ? void 0 : _g.first()) ||
+            ((_h = message === null || message === void 0 ? void 0 : message.guild) === null || _h === void 0 ? void 0 : _h.member(args.join(' '))) ||
+            ((_l = (_k = (_j = message === null || message === void 0 ? void 0 : message.guild) === null || _j === void 0 ? void 0 : _j.members) === null || _k === void 0 ? void 0 : _k.cache) === null || _l === void 0 ? void 0 : _l.find((mem) => {
+                var _a, _b;
+                return ((_b = (_a = mem.user) === null || _a === void 0 ? void 0 : _a.username) === null || _b === void 0 ? void 0 : _b.toLowerCase()) ===
+                    (args === null || args === void 0 ? void 0 : args.join(' ').toLowerCase());
+            })) ||
+            ((_p = (_o = (_m = message === null || message === void 0 ? void 0 : message.guild) === null || _m === void 0 ? void 0 : _m.members) === null || _o === void 0 ? void 0 : _o.cache) === null || _p === void 0 ? void 0 : _p.find((mem) => {
+                var _a, _b;
+                return ((_b = (_a = mem === null || mem === void 0 ? void 0 : mem.user) === null || _a === void 0 ? void 0 : _a.tag) === null || _b === void 0 ? void 0 : _b.toLowerCase()) ===
+                    (args === null || args === void 0 ? void 0 : args.join(' ').toLowerCase());
+            })) ||
+            ((_s = (_r = (_q = message === null || message === void 0 ? void 0 : message.guild) === null || _q === void 0 ? void 0 : _q.members) === null || _r === void 0 ? void 0 : _r.cache) === null || _s === void 0 ? void 0 : _s.find((mem) => {
+                var _a;
+                return ((_a = mem.nickname) === null || _a === void 0 ? void 0 : _a.toLowerCase()) ===
+                    (args === null || args === void 0 ? void 0 : args.join(' ').toLowerCase());
+            }));
+        if (!member)
+            return (_t = message === null || message === void 0 ? void 0 : message.channel) === null || _t === void 0 ? void 0 : _t.send("Couldn't find that member!");
+        if (((_u = member === null || member === void 0 ? void 0 : member.presence) === null || _u === void 0 ? void 0 : _u.status) === 'offline' ||
+            !((_v = member === null || member === void 0 ? void 0 : member.presence) === null || _v === void 0 ? void 0 : _v.clientStatus))
+            return (_w = message === null || message === void 0 ? void 0 : message.channel) === null || _w === void 0 ? void 0 : _w.send('This member is offline!');
+        if ((_y = (_x = member === null || member === void 0 ? void 0 : member.presence) === null || _x === void 0 ? void 0 : _x.clientStatus) === null || _y === void 0 ? void 0 : _y.desktop)
+            device = `${device} PC`;
+        if ((_0 = (_z = member === null || member === void 0 ? void 0 : member.presence) === null || _z === void 0 ? void 0 : _z.clientStatus) === null || _0 === void 0 ? void 0 : _0.mobile)
+            device = `${device} Mobile`;
+        if ((_2 = (_1 = member === null || member === void 0 ? void 0 : member.presence) === null || _1 === void 0 ? void 0 : _1.clientStatus) === null || _2 === void 0 ? void 0 : _2.web)
+            device = `${device} Browser`;
+        (_3 = message === null || message === void 0 ? void 0 : message.channel) === null || _3 === void 0 ? void 0 : _3.send(`This member is using${device}`);
+    }
+});
 
 //================================================================================\\
 
