@@ -24,22 +24,22 @@ client.on("ready", async () => {
 //===============================================================================\\
 client.on("guildCreate", guild => {
   client.channels.cache.get("898680185170325616").send(`
-<:IconJoin:897811847305134122> **Join Server**: ${client.guilds.cache.size}
-<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
-<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
-<:IconID:897811847426756650> **Owner  Id**: ${guild.owner.id}
-<:IconID:897811847426756650> **Server Id**: ${guild.id}
-<:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}`);
+<:join:902312806618116096> **Join Server**: ${client.guilds.cache.size}
+<:Servers:902312906618724372> **Server Name**: ${guild.name}
+IconCrown: **Server Owner**: ${guild.owner}
+<:iduser:902312780009459733> **Owner  Id**: ${guild.owner.id}
+<:iduser:902312780009459733> **Server Id**: ${guild.id}
+<:Users:902312879838068796> **Member Count**: ${guild.memberCount}`);
 });
 ////////////////////////////////////////////
 client.on("guildDelete", guild => {
   client.channels.cache.get("898680185170325616").send(`
-<:IconLeave:897811847682592799> **Lift Server**: ${client.guilds.cache.size}
-<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
+<:left:902312846963114034> **Lift Server**: ${client.guilds.cache.size}
+<:Servers:902312906618724372> **Server Name**: ${guild.name}
 <:IconCrown:897812868236455946> **Server Owner**: ${guild.owner}
 <:IconID:897811847426756650> **Owner Id**: ${guild.owner.id}
 <:IconID:897811847426756650> **Server Id**: ${guild.id}
-<:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}`);
+<:Users:902312879838068796> **Member Count**: ${guild.memberCount}`);
 });
 //================================================================================\\
 client.on('message' , message => {
@@ -103,10 +103,10 @@ const embed = new Discord.MessageEmbed()
  .setColor("RANDOM")
 .setDescription(`**Member cases <:IconStatusWebOnline:897811847724531722>
 <:onlines:895398659389292625> Online ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
-<:729181212530442311:895398659217309737> Do Not Disturb ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
-<:729181121933475931:895398659284434945> Idle ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
-<:729181162182017051:895398658969862245> Offline ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
-<:IconStaff:897811847728754718> All ${message.guild.memberCount}**`)
+<:dnd:895398659217309737> Do Not Disturb ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
+<:sleep:895398659284434945> Idle ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
+<:Offlines:895398658969862245> Offline ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
+<:Users:902312879838068796> All ${message.guild.memberCount}**`)
 message.channel.send(embed)
 
 }
