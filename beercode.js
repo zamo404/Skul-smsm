@@ -29,7 +29,7 @@ client.on("guildCreate", guild => {
   client.channels.cache.get("898680185170325616").send(`
 ✅ **Join Server**: ${client.guilds.cache.size}
 🔠 **Server Name**: ${guild.name}
-👑 **Server Owner**: ${guild.username}
+👑 **Server Owner**: ${guild.owner.tag}
 🆔 **Server Id**: ${guild.id}
 👥 **Member Count**: ${guild.memberCount}`);
 });
@@ -38,7 +38,7 @@ client.on("guildDelete", guild => {
   client.channels.cache.get("898680185170325616").send(`
 <:IconLeave:897811847682592799> **Lift Server**: ${client.guilds.cache.size}
 <:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
-<:IconCrown:897812868236455946> **Server Owner**: ${guild.username}
+<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner.tag}
 <:IconID:897811847426756650> **Server Id**: ${guild.id}
 <:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}`);
 });
@@ -150,8 +150,8 @@ client.on('message', message => {
  
 **__About Bot__**
  
-<:partner:891421834585714689> Servers   **__${client.guilds.cache.size}__**
-<:addmember:883032780865409054> Users   **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
+<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
 <a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
 <:news:891421920984178719> Owner Bot - <@349942964904001546>
 <:members:891422824294662164> Admin Bot - <@!800994896890691605>
