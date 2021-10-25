@@ -100,12 +100,13 @@ client.on('message',async message => {
 client.on('message', message => {
 if(message.content == 'Jmembers') {
 const embed = new Discord.MessageEmbed()
+ .setColor("RANDOM")
 .setDescription(`**Member cases <:IconStatusWebOnline:897811847724531722>
-<:729181184193462285:895398659389292625> Online${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
-<:729181212530442311:895398659217309737> Do Not Disturb${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
-<:729181121933475931:895398659284434945> Idle${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
-<:729181162182017051:895398658969862245> Offline${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
-<:IconStaff:897811847728754718> All${message.guild.memberCount}**`)
+<:729181184193462285:895398659389292625> Online ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
+<:729181212530442311:895398659217309737> Do Not Disturb ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
+<:729181121933475931:895398659284434945> Idle ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
+<:729181162182017051:895398658969862245> Offline ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
+<:IconStaff:897811847728754718> All ${message.guild.memberCount}**`)
 message.channel.send(embed)
 
 }
@@ -129,9 +130,73 @@ client.on("guildMemberRemove", member => {
 
 //================================================================================\\
 
+client.on("message", message => {
+  if (!message.content.startsWith()) return;
+  if (!message.channel.guild)
+    return 
+  let command = message.content.split(" ")[0];
+  command = command.slice(length);
+  if (command === "g") {
+    var sabotage = message.mentions.users.first();
+    if (sabotage == message.author)
+      return message.reply(`**No please menition user**`);
+    if (sabotage === client.user) return message.reply(`**Why?**`);
+    if (sabotage < 1) {
+      message.delete();
+      return message.channel.sendMessage(
+        "Put something to kill like mention your username or use an emoji"
+      );
+    }
+    if (!sabotage)
+      return message.channel.send(`Please Mention A Member to Kill :warning:`);
+    message.channel.send("▄︻̷̿┻̿═━一 ${sabotage").then(msg => {
+      msg.edit('    **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
+      setTimeout(function() {
+        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
+      }, 1000);
+      setTimeout(function() {
+        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
+      }, 2000);
+      setTimeout(function() {
+        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
+      }, 3000);
+      setTimeout(function() {
+        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
+      }, 4000);
+      setTimeout(function() {
+        msg.edit('  **`___SLOTS___  `**                                                    <:slots2:421472583347732511> <:slots1:421472583410515969> <:slots3:421472582924238869>                                                                               `|         ||         |` ');
+      }, 5000);
+      msg.delete(6000);
+      message.delete();
+    });
+    message.channel
+      .send("**** The crime has been successfully hidden 🕳 **")
+      .then(msg => msg.delete(7000));
+  }
+});
+//================================================================================\\
+client.on("message", message => {
+  if (message.content.startsWith("slots")) {
+    let slot1 = ["🍏", "🍇", "🍒", "🍍", "🍅", "🍆", "🍑", "🍓"];
+    let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+    let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+    let slots3 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+    let we;
+    if (slots1 === slots2 && slots2 === slots3) {
+      we = "Win!";
+    } else {
+      we = "Lose!";
+    }
+    message.channel.send(`${slots1} | ${slots2} | ${slots3} - ${we}`);
+  }
+});
+//================================================================================\\
+
 
 
 //================================================================================\\
+
+
 client.on("message", message => {
   if (message.content === "Jhelp") {
     const embed = new Discord.MessageEmbed()
