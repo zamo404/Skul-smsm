@@ -254,15 +254,13 @@ client.on('message', message => {
  
 **__About Bot__**
  
-<:partner:891421834585714689> Servers **__${client.guilds.cache.size}__**
-<:addmember:883032780865409054> Users **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
-<a:threads:871813387741433867> Channels **__${client.channels.cache.size}__**
-<:news:891421920984178719> Owner Bot - <@349942964904001546>
-<:members:891422824294662164> Admin Bot - <@!800994896890691605>
- <:members:891422824294662164> My Prefix - J
- <:members:891422824294662164> My ID - ${client.user.id}
- <:members:891422824294662164> My Ping - ${Date.now() - message.createdTimestamp}
-`)
+:nodejs:  Prefix Bot - J
+:nodejs: Servers - ${client.guilds.cache.size}
+:nodejs: Users - ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},
+:nodejs: Channels - ${client.channels.cache.size}
+:nodejs: Roles ....
+:nodejs: Owner Bot - <@349942964904001546
+:nodejs: Admin Bot - <@800994896890691605`)
                message.channel.send(embed);
            }
 });
