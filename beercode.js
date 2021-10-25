@@ -220,18 +220,18 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
       .setColor("WHITE")
-      .setAuthor("The Prefix is { J }").setDescription(`
+      .setAuthor("The Prefix Bot is { J }").setDescription(`
 
 ⚙️ ┇ **Info Commands**
-> uptime - about - server - members
-> ping - invite - support
+> **uptime** - **about** - **server** - **members**
+> **ping** - **invite** - **support**
 :dollar: ┇**Economy Commands**
-> daily - cash - work - rob
-> send - steal - shop - shop
-> dep - check - steal 
+> **Jdaily** - **Jcash** - **Jwork** - **Jrob**
+> **Jsend** - **Jsteal** - **Jshop** - **Jshop**
+> **Jdep** - **Jcheck** - **Jsteal** 
 🎰 ┇**Game Comamnds**
-> Jcoinflip(cf) - Jslots(s) - Jfish(f)
-:books: **If you don't know how to use a bot type {Jhowplay)
+> **Jcoinflip(cf)** - **Jslots(s)** - **Jfish(f)**
+:books: **If you don't know how to use a bot or game Command type {Jhowplay}**
 🔗 ┇**Link**
 [Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)
 `);
