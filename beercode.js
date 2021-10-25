@@ -130,7 +130,23 @@ message.channel.send(embed)
 
 //================================================================================\\
 
+client.on("message", message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith()) return;
+  if (message.content.startsWith("avatar")) {
+    const mention = message.mentions.users.first()
 
+    if (!mention) return console.log("")
+    let embed = new Discord.RichEmbed()
+      .setColor("BLACK")
+      .setAuthor(`${mention.username}#${mention.discriminator}`, `${mention.avatarURL}`)
+      .setTitle("Avatar Link")
+      .setURL(`${mention.avatarURL}`)
+      .setImage(`${mention.avatarURL}`)
+      .setFooter(`Requested By ${message.author.tag}`, `${message.author.avatarURL}`)
+    message.channel.send(embed)
+  }
+})
 
 //================================================================================\\
 
@@ -172,7 +188,6 @@ client.on('message', message => {
  Servers - ${client.guilds.cache.size}
  Users - ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},
  Channels - ${client.channels.cache.size}
- Roles   - ${client.roles.cache.size}
  Owner Bot - <@349942964904001546>
  Admin Bot - <@800994896890691605>
 
