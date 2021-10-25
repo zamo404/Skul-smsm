@@ -184,12 +184,15 @@ client.on('message', message => {
  
 **__About Bot__**
  
- Prefix Bot - J
- Servers - ${client.guilds.cache.size}
- Users - ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},
- Channels - ${client.channels.cache.size}
- Owner Bot - <@349942964904001546>
- Admin Bot - <@800994896890691605>
+ <:IconStatusWebOnline:897811847724531722> **Servers** - **__${client.guilds.cache.size}__**
+ 
+ <:IconStaff:897811847728754718> **Users** - **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
+ 
+ <:828229201307369492:884402335319724062> **Channels** - **__${client.channels.cache.size}__**
+ 
+ <:IconCrown:897812868236455946> **Owner Bot** - <@349942964904001546>
+ 
+ <:Devloper:902181949110636574> **Admin Bot** - <@800994896890691605>
 
 `)
                message.channel.send(embed);
