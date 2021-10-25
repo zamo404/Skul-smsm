@@ -114,6 +114,18 @@ message.channel.send(embed)
 
 //================================================================================\\
 
+client.on("message", async baltra => {
+      if (baltra.content.startsWith(`ping`)) {
+        if (!baltra.channel.guild) return;
+        if (baltra.author.bot) return;
+        baltra.channel.send(`\`\`\`js
+    Time_Taken: ${Date.now() - baltra.createdTimestamp} ms :signal_strength:
+    Web_Socket: ${Math.round(client.ping)} ms :signal_strength:\`\`\``)
+      }
+    })
+
+//================================================================================\\
+
 
 
 //================================================================================\\
@@ -127,26 +139,6 @@ message.channel.send(embed)
 //================================================================================\\
 
 
-
-//================================================================================\\
-
-client.on("message", message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith()) return;
-  if (message.content.startsWith("avatar")) {
-    const mention = message.mentions.users.first()
-
-    if (!mention) return console.log("")
-    let embed = new Discord.RichEmbed()
-      .setColor("BLACK")
-      .setAuthor(`${mention.username}#${mention.discriminator}`, `${mention.avatarURL}`)
-      .setTitle("Avatar Link")
-      .setURL(`${mention.avatarURL}`)
-      .setImage(`${mention.avatarURL}`)
-      .setFooter(`Requested By ${message.author.tag}`, `${message.author.avatarURL}`)
-    message.channel.send(embed)
-  }
-})
 
 //================================================================================\\
 
@@ -179,20 +171,20 @@ client.on("message", message => {
 client.on('message', message => {
     if(message.content === "Jabout") {
         const embed = new Discord.MessageEmbed()
-        .setColor("BLUE")
+        .setColor("ORANGE")
         .setDescription(`
  
 **__About Bot__**
  
- <:IconStatusWebOnline:897811847724531722> **Servers** - **__${client.guilds.cache.size}__**
- 
- <:IconStaff:897811847728754718> **Users** - **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},__**
- 
- <:828229201307369492:884402335319724062> **Channels** - **__${client.channels.cache.size}__**
- 
- <:IconCrown:897812868236455946> **Owner Bot** - <@349942964904001546>
- 
- <:Devloper:902181949110636574> **Admin Bot** - <@800994896890691605>
+<:IconStatusWebOnline:897811847724531722> **Servers** - **__${client.guilds.cache.size}__**
+                                           ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+<:IconStaff:897811847728754718> **Users** - **__${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}__**
+                                 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+<:828229201307369492:884402335319724062> **Channels** - **__${client.channels.cache.size}__**
+                                          ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+<:IconCrown:897812868236455946> **Owner Bot** - <@349942964904001546>
+                                 ✧･ﾟ: ✧･ﾟ: - :･ﾟ✧:･ﾟ✧
+<:Devloper:902181949110636574> **Admin Bot** - <@800994896890691605>
 
 `)
                message.channel.send(embed);
