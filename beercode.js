@@ -122,96 +122,10 @@ message.channel.send(embed)
 
 //================================================================================\\
 
-client.on("message", message => {
-  if (!message.content.startsWith()) return;
-  if (!message.channel.guild)
-    return 
-  let command = message.content.split("g")[0];
-  command = command.slice(length);
-  if (command === "g") {
-    var sabotage = message.mentions.users.first();
-    if (sabotage == message.author)
-      return message.reply(`**No please menition user**`);
-    if (sabotage === client.user) return message.reply(`**Why?**`);
-    if (sabotage < 1) {
-      message.delete();
-      return message.channel.sendMessage(
-        "Put something to kill like mention your username or use an emoji"
-      );
-    }
-    if (!sabotage)
-      return message.channel.send(`Please Mention A Member to Kill :warning:`);
-    message.channel.send("▄︻̷̿┻̿═━一 ${sabotage").then(msg => {
-      msg.edit('    **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
-      setTimeout(function() {
-        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
-      }, 1000);
-      setTimeout(function() {
-        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
-      }, 2000);
-      setTimeout(function() {
-        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
-      }, 3000);
-      setTimeout(function() {
-        msg.edit('  **`___SLOTS___  `**                                                    <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554> <a:emoji_56:859017377261420554>                                                                      `|         ||         |` ');
-      }, 4000);
-      setTimeout(function() {
-        msg.edit('  **`___SLOTS___  `**                                                    <:slots2:421472583347732511> <:slots1:421472583410515969> <:slots3:421472582924238869>                                                                               `|         ||         |` ');
-      }, 5000);
-      msg.delete(6000);
-      message.delete();
-    });
-    message.channel
-      .send("**** The crime has been successfully hidden 🕳 **")
-      .then(msg => msg.delete(7000));
-  }
-});
+
+
 //================================================================================\\
 
-client.on("message", message => {
-  if (!message.content.startsWith()) return;
-  if (!message.channel.guild)
-    return 
-  let command = message.content.split(" ")[0];
-  command = command.slice(length);
-  if (command === "m") {
-    var sabotage = message.mentions.users.first();
-    if (sabotage == message.author)
-      return message.reply(`**No please menition user**`);
-    if (sabotage === client.user) return message.reply(`**Why?**`);
-    if (sabotage < 1) {
-      message.delete();
-      return message.channel.sendMessage(
-        "Put something to kill like mention your username or use an emoji"
-      );
-    }
-    if (!sabotage)
-      return message.channel.send(`Please Mention A Member to Kill :warning:`);
-    message.channel.send("▄︻̷̿┻̿═━一 ${sabotage").then(msg => {
-      msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :three:`);
-      setTimeout(function() {
-        msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :two:`);
-      }, 1000);
-      setTimeout(function() {
-        msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :one:`);
-      }, 2000);
-      setTimeout(function() {
-        msg.edit(`▄︻̷̿┻̿═━一 :boom:`);
-      }, 3000);
-      setTimeout(function() {
-        msg.edit(`▄︻̷̿┻̿═━一 :fire:`);
-      }, 4000);
-      setTimeout(function() {
-        msg.edit(`▄︻̷̿┻̿═━一 :skull:`);
-      }, 5000);
-      msg.delete(6000);
-      message.delete();
-    });
-    message.channel
-      .send("**** The crime has been successfully hidden 🕳 **")
-      .then(msg => msg.delete(7000));
-  }
-});
 
 
 //================================================================================\\
@@ -254,13 +168,15 @@ client.on('message', message => {
  
 **__About Bot__**
  
-:nodejs:  Prefix Bot - J
-:nodejs: Servers - ${client.guilds.cache.size}
-:nodejs: Users - ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},
-:nodejs: Channels - ${client.channels.cache.size}
-:nodejs: Roles ....
-:nodejs: Owner Bot - <@349942964904001546
-:nodejs: Admin Bot - <@800994896890691605`)
+ Prefix Bot - J
+ Servers - ${client.guilds.cache.size}
+ Users - ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},
+ Channels - ${client.channels.cache.size}
+ Roles   - ${client.roles.cache.size}
+ Owner Bot - <@349942964904001546>
+ Admin Bot - <@800994896890691605>
+
+`)
                message.channel.send(embed);
            }
 });
