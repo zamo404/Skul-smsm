@@ -222,16 +222,16 @@ client.on("message", message => {
       .setColor("WHITE")
       .setAuthor("The Prefix Bot is { J }").setDescription(`
 
-⚙️ ┇ **Info Commands**
-> **uptime** - **about** - **server** - **members**
-> **ping** - **invite** - **support**
+ℹ️ ┇ **Info Commands**
+> **Juptime** - **Jabout** - **Jserver** - **Jping**
+> **Jmembers** - **Jinvite** - **Jsupport**
 :dollar: ┇**Economy Commands**
 > **Jdaily** - **Jcash** - **Jwork** - **Jrob**
 > **Jsend** - **Jsteal** - **Jshop** - **Jshop**
 > **Jdep** - **Jcheck** - **Jsteal** 
-🎰 ┇**Game Comamnds**
+:game_die: ┇**Game Comamnds**
 > **Jcoinflip(cf)** - **Jslots(s)** - **Jfish(f)**
-:books: **If you don't know how to use a bot or game Command type {Jhowplay}**
+:books: **If you don't know how to use a bot or game Commands type (**__Jhowplay__**)**
 🔗 ┇**Link**
 [Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)
 `);
