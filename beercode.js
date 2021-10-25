@@ -224,18 +224,16 @@ client.on("message", message => {
 
 ⚙️ ┇ **Info Commands**
 > uptime - about - server - members
-> ping - invite - support - howplay
-
+> ping - invite - support
 :dollar: ┇**Economy Commands**
 > daily - cash - work - rob
 > send - steal - shop - shop
-> dep - check - steal - 
-
+> dep - check - steal 
 🎰 ┇**Game Comamnds**
-> coinflip - slots - fish
-
+> Jcoinflip(cf) - Jslots(s) - Jfish(f)
+:books: **If you don't know how to use a bot type {Jhowplay)
 🔗 ┇**Link**
-[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot) -  [Vote](coming soon)
+[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)
 `);
     message.channel.send(embed);
   }
