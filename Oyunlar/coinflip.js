@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
         message.channel.send(new Discord.MessageEmbed()
                       .setColor("#ffff00")
                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-                        .setDescription(`<a:813403485902864435:884402355301412864> You Have A Cooldown For __coinflip__
+                        .setDescription(`<a:slowmoded:895398789119099001> You Have A Cooldown For __coinflip__
                         **Time left**
                         ${time.seconds ? time.seconds + 'seconds' : 'try again!'}`))
       } else {
@@ -45,10 +45,10 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
      if (awnser === "LOOSELOOSE") {
  var kaybettin = miktar*2        
         //////        
-        var text2 = `**<@${message.author.id}> CoinFlip <a:854073741520666644:897455060928323585> Choice win Or Lost**`;
+        var text2 = `**<@${message.author.id}> CoinFlip <a:coinflip:897450914196099092> Choice win Or Lost**`;
           message.channel.send(text2).then(msg => {
             setTimeout(() => {
-              msg.edit(`**<@${message.author.id}>spent cowoncy ${-kaybettin} <a:coinflip:897450914196099092> and chose heads
+              msg.edit(`**<@${message.author.id}>spent cowoncy ${-kaybettin} <:youlose:897511163456258048> and chose heads
 The coin spins... :coin: tail and you lost it all...loose (loose)**`);
             }, 3000);
           });
@@ -57,10 +57,10 @@ The coin spins... :coin: tail and you lost it all...loose (loose)**`);
       } else { 
 
           var kazandın = miktar*2
-        var text2 = `**<@${message.author.id}> CoinFlip <a:854073741520666644:897455060928323585> Choice win Or Lost**`;
+        var text2 = `**<@${message.author.id}> CoinFlip <a:coinflip:897450914196099092> Choice win Or Lost**`;
           message.channel.send(text2).then(msg => {
             setTimeout(() => {
-              msg.edit(`**<@${message.author.id}> spent cowoncy ${kazandın} <:897459755361120326:897515990173241364> and chose heads
+              msg.edit(`**<@${message.author.id}> spent cowoncy ${kazandın} <:youwin:897459755361120326> and chose heads
 The coin spins... :coin: coinflip win (win)**`);
             }, 3000);
           });
