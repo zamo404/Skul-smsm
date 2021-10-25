@@ -27,20 +27,22 @@ client.on("ready", async () => {
 //===============================================================================\\
 client.on("guildCreate", guild => {
   client.channels.cache.get("898680185170325616").send(`
-✅ **Join Server**: ${client.guilds.cache.size}
+🔵 **Join Server**: ${client.guilds.cache.size}
 🔠 **Server Name**: ${guild.name}
-👑 **Server Owner**: ${guild.owner.tag}
+👑 **Server Owner**: ${guild.owner}
+🕵️‍♂️ **Owner  Id**: ${guild.owner.id}
 🆔 **Server Id**: ${guild.id}
 👥 **Member Count**: ${guild.memberCount}`);
 });
 ////////////////////////////////////////////
 client.on("guildDelete", guild => {
   client.channels.cache.get("898680185170325616").send(`
-<:IconLeave:897811847682592799> **Lift Server**: ${client.guilds.cache.size}
-<:IconStatusWebOnline:897811847724531722> **Server Name**: ${guild.name}
-<:IconCrown:897812868236455946> **Server Owner**: ${guild.owner.tag}
-<:IconID:897811847426756650> **Server Id**: ${guild.id}
-<:IconStaff:897811847728754718> **Member Count**: ${guild.memberCount}`);
+ 🔴 **Lift Server**: ${client.guilds.cache.size}
+ 🔠 **Server Name**: ${guild.name}
+ 👑 **Server Owner**: ${guild.owner}
+ 🕵️‍♂️ **Owner Id**: ${guild.owner.id}
+ 🆔 **Server Id**: ${guild.id}
+ 👥 **Member Count**: ${guild.memberCount}`);
 });
 //================================================================================\\
  
