@@ -128,7 +128,7 @@ client.on("message", message => {
 //================================================================================\\
 
 client.on(`message`, message => {
-    if (message.content.startsWith("server")) {
+    if (message.content.startsWith("Jserver")) {
         if (!message.channel.guild) return message.channel.send('This is for servers only');
  
         const text = message.guild.channels.cache.filter(r => r.type === "text").size
@@ -195,25 +195,13 @@ client.on(`message`, message => {
 
 //================================================================================\\
 
- client.on('message',async message => {
-  if(message.content.startsWith("avatar")) {
- 
-    let args = message.content.split(" ").slice(1).join(" ");   
-   let member = message.mentions.users.first() || message.author
-    let avatar = member.displayAvatarURL({size: 1024})
-      const embed = new Discord.MessageEmbed()
-        .setTitle(`${member.username}'s avatar`)
-        .setImage(avatar)
-        .setColor("BLACK")
-        message.channel.send(embed);
-    
-  }}) 
+
 
 //================================================================================\\
 
 client.on('guildCreate', guild => {
 var embed = new Discord.RichEmbed()
-  .setColor("#0073fa")
+  .setColor("WHITE")
   .setDescription(`
 > Thank you for adding me 
 > My Prefix : \`J\`
