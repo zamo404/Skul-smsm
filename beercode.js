@@ -134,7 +134,7 @@ client.on("message", message => {
   if (!message.content.startsWith()) return;
   if (!message.channel.guild)
     return 
-  let command = message.content.split(" ")[0];
+  let command = message.content.split("g")[0];
   command = command.slice(length);
   if (command === "g") {
     var sabotage = message.mentions.users.first();
@@ -176,10 +176,79 @@ client.on("message", message => {
 });
 //================================================================================\\
 
+client.on("message", message => {
+  if (!message.content.startsWith()) return;
+  if (!message.channel.guild)
+    return 
+  let command = message.content.split(" ")[0];
+  command = command.slice(length);
+  if (command === "m") {
+    var sabotage = message.mentions.users.first();
+    if (sabotage == message.author)
+      return message.reply(`**No please menition user**`);
+    if (sabotage === client.user) return message.reply(`**Why?**`);
+    if (sabotage < 1) {
+      message.delete();
+      return message.channel.sendMessage(
+        "Put something to kill like mention your username or use an emoji"
+      );
+    }
+    if (!sabotage)
+      return message.channel.send(`Please Mention A Member to Kill :warning:`);
+    message.channel.send("▄︻̷̿┻̿═━一 ${sabotage").then(msg => {
+      msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :three:`);
+      setTimeout(function() {
+        msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :two:`);
+      }, 1000);
+      setTimeout(function() {
+        msg.edit(`▄︻̷̿┻̿═━一 ${sabotage} :one:`);
+      }, 2000);
+      setTimeout(function() {
+        msg.edit(`▄︻̷̿┻̿═━一 :boom:`);
+      }, 3000);
+      setTimeout(function() {
+        msg.edit(`▄︻̷̿┻̿═━一 :fire:`);
+      }, 4000);
+      setTimeout(function() {
+        msg.edit(`▄︻̷̿┻̿═━一 :skull:`);
+      }, 5000);
+      msg.delete(6000);
+      message.delete();
+    });
+    message.channel
+      .send("**** The crime has been successfully hidden 🕳 **")
+      .then(msg => msg.delete(7000));
+  }
+});
 
 
 //================================================================================\\
 
+client.on("message", async message => {
+  if (message.content.startsWith("tinvites")) {
+    if (message.author.bot) return;
+    if (!message.channel.guild)
+      return message.reply(" Error : ` Server Command `");
+ 
+    var invites = await message.guild.fetchInvites();
+    invites = invites.array();
+    invites, "uses", { reverse: true };
+    let possibleInvites = ["User Invited |  Uses "];
+    invites.forEach(i => {
+      if (i.uses === 0) {
+        return;
+      }
+      possibleInvites.push([
+        "\n " + "<@" + i.inviter.id + ">" + "  :  " + i.uses
+      ]);
+    });
+    let embed = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+      .addField("Top Invites.", `${possibleInvites}`);
+ 
+    message.channel.send(embed);
+  }
+});
 
 
 //================================================================================\\
@@ -358,5 +427,4 @@ console.log("Leave Server -200 member")
 
 });
 //====================================================//
-
 client.login(process.env.TOKEN_BOT);
