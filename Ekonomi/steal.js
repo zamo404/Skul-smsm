@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
  if(!user) return message.channel.send(new Discord.MessageEmbed()
                       .setColor("RED")
                       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))                   
-                      .setDescription(`<a:875051721288732762:897506485251227729> You have to tag the user whose money you want to steal!`))
+                      .setDescription(`<a:Wrongs:902312437863309382> You have to tag the user whose money you want to steal!`))
   let targetuser = await db.fetch(`para_${user.id}`);
   let author     = await db.fetch(`çalma_${message.author.id}`);
   let author2    = await db.fetch(`para_${message.author.id}`);
@@ -24,7 +24,7 @@ if (author !== null && timeout - (Date.now() - author) > 0) {
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("RED")
     .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-     .setFiled(`<a:875051721288732762:897506485251227729> To rob someone ${time.minutes ? time.minutes + ' minute,' : ''} ${time.seconds ? time.seconds + ' you have to wait seconds!' : 'try again!'}`);
+     .setFiled(`<a:Wrongs:902312437863309382> To rob someone ${time.minutes ? time.minutes + ' minute,' : ''} ${time.seconds ? time.seconds + ' you have to wait seconds!' : 'try again!'}`);
     message.channel.send(timeEmbed)
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   } else {
@@ -32,7 +32,7 @@ if (author !== null && timeout - (Date.now() - author) > 0) {
     let moneyEmbed = new Discord.MessageEmbed()
   .setColor("RED")
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
-  .setDescription(`<a:875051721288732762:897506485251227729> To steal money you need at least 200 💸 coins`);
+  .setDescription(`<a:Wrongs:902312437863309382> To steal money you need at least 200 💸 coins`);
 
 
   if (author2 < 200) {
@@ -42,7 +42,7 @@ var lostmoney = rastgeleMiktar(500,1000)
   let moneyEmbed2 = new Discord.MessageEmbed()
   .setColor("RED")
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
-  .setDescription(`<a:875051721288732762:897506485251227729> Faqir you tried to rob someone and ${lostmoney} 💸 you were fined`);
+  .setDescription(`<a:Wrongs:902312437863309382> Faqir you tried to rob someone and ${lostmoney} 💸 you were fined`);
   
 
   //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\ 
@@ -55,7 +55,7 @@ db.add(`para_${message.author.id}`, -lostmoney)
   let authorembed = new Discord.MessageEmbed()
   .setColor("RED")
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
-  .setDescription(`<a:875044848284082247:897508783687892992> You think me to undress yourself?!`);
+  .setDescription(`<a:897508783687892992:902407960708395018> You think me to undress yourself?!`);
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
     if(user.id === message.author.id) {
     return message.channel.send(authorembed)
@@ -65,7 +65,7 @@ db.add(`para_${message.author.id}`, -lostmoney)
 
   let embed = new Discord.MessageEmbed()
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
-   .setDescription(`<a:875051634386935880:897506842748530729> Robbery Successful, ${user}'you robbed and ${gotmoney} <a:874712610396844135:897507318122565733> you won`)
+   .setDescription(`<a:rights:902312393474965604> Robbery Successful, ${user}'you robbed and ${gotmoney} <a:897507318122565733:902404122018476103> you won`)
    .setColor("GREEN")
 
    message.channel.send(embed)

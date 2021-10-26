@@ -73,7 +73,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
               msg.edit(`**
     ___SLOTS___  
 |                  |
-|${slots[result1]}${slots[result2]}${slots[result3]}|${message.author.username}<a:870059060714700870:897458103681962074> ${miktar}-
+|${slots[result1]}${slots[result2]}${slots[result3]}|${message.author.username}<a:loselose:897458599285104691> ${miktar}-
 |                  |**`, true);
             }, 3500);
           });
