@@ -97,19 +97,7 @@ client.on('message',async message => {
 })
 //================================================================================\\
 
-client.on('message', message => {
-if(message.content == 'Jmembers') {
-const embed = new Discord.MessageEmbed()
- .setColor("RANDOM")
-.setDescription(`**Member cases <:Servers:902312906618724372>
-<:onlines:895398659389292625> Online ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
-<:dnd:895398659217309737> Do Not Disturb ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
-<:sleep:895398659284434945> Idle ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
-<:Offlines:895398658969862245> Offline ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
-<:Users:902312879838068796> All ${message.guild.memberCount}**`)
-message.channel.send(embed)
-    }
-});
+
 
 //================================================================================\\
 
@@ -222,8 +210,8 @@ client.on("message", message => {
       .setAuthor("The Prefix Bot is { J }").setDescription(`
 
 ℹ️ ┇ **Info Commands**
-> **Juptime** - **Jabout** - **Jserver** - **Jping**
-> **Jmembers** - **Jinvite** - **Jsupport**
+> **Juptime** - **Jabout** - **Jserver**
+> **Jinvite** - **Jsupport** - **Jping**
 :dollar: ┇**Economy Commands**
 > **Jdaily** - **Jcash** - **Jwork** - **Jrob**
 > **Jsend** - **Jsteal** - **Jshop** - **Jshop**
