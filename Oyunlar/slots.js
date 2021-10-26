@@ -8,22 +8,22 @@ exports.run = function(client, message,  args) {
   if(!miktar) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots** You Can't More Than <a:813505315534405632:884402335823069274> 50,000`))
+      .setDescription(`**slots** You Can't More Than <a:813505315534405632:895398661285109760> 50,000`))
   //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 if(miktar > 50000) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots**You Can't More Than <a:813505315534405632:884402335823069274> 50,000`))
+      .setDescription(`**slots**You Can't More Than <a:813505315534405632:895398661285109760> 50,000`))
   /////////////
 if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   .setColor("#ffff00")
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-  .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:813505315534405632:884402335823069274> there is!' : 'you have no money!'}`))
+  .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:813505315534405632:895398661285109760> there is!' : 'you have no money!'}`))
   /////////////////
   if(isNaN(miktar) || miktar < 0) return message.channel.send(new Discord.MessageEmbed()
 .setColor("RED")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-.setDescription(`<a:813505315534405632:884402335823069274> The amount you entered is not a valid number !?`))
+.setDescription(`<a:813505315534405632:895398661285109760> The amount you entered is not a valid number !?`))
  let kazandin = miktar*3   
   let slots = ["🍌","🍎","🍇","🍒","🍉","🍆"];
   //
@@ -48,14 +48,14 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
     var text2 = `**
     ___SLOTS___  
 |                  |
-|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
+|<a:slots:897458599310282805><a:slots:897458599310282805><a:slots:897458599310282805>|${message.author.username}
 |                  |**`;
           message.channel.send(text2).then(msg => {
             setTimeout(() => {
               msg.edit(`**
     ___SLOTS___  
 |                  |
-|${slots[result1]}${slots[result2]}${slots[result3]}${message.author.username}<a:813847731285393439:884402358640066640> ${kazandin}+
+|${slots[result1]}${slots[result2]}${slots[result3]}${message.author.username}<a:870059089055592508:897458600128180264> ${kazandin}+
 |                  |**`,true);
             }, 3500);
           });
@@ -66,7 +66,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
     var text3 = `**
     ___SLOTS___  
 |                  |
-|<a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174><a:872142091059355690:897456584727343174>|${message.author.username}
+|<a:slots:897458599310282805><a:slots:897458599310282805><a:slots:897458599310282805>|${message.author.username}
 |                  |**`;
           message.channel.send(text3).then(msg => {
             setTimeout(() => {

@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
                       .setColor("RED")
                       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
-                                                .setDescription(`You Can't More Than <a:875051721288732762:897506485251227729> 250`))
+                                                .setDescription(`You Can't More Than <a:Wrongs:902312437863309382> 250`))
         const result = [
           "WINWIN",
           "LOOSELOOSE"

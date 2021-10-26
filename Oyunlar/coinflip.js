@@ -27,12 +27,12 @@ exports.run = async (client, message, args) => {
  if(miktar > 50000) return message.channel.send(new Discord.MessageEmbed()
                                         .setColor("#ffff00")
                                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-                                        .setDescription(`You can bet up to 50000 <a:874712610396844135:897507318122565733>!`))   
+                                        .setDescription(`You can bet up to 50000 <a:897507318122565733:902404122018476103>!`))   
 if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
                                               .setColor("#ffff00")
                                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-                                        .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:874712610396844135:897507318122565733> there is!' : 'you have no money!'}`))
+                                        .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:897507318122565733:902404122018476103> there is!' : 'you have no money!'}`))
         const result = [
           "LOOSELOOSE",
           "WINWIN",
