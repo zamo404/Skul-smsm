@@ -23,7 +23,7 @@ client.on("ready", async () => {
 });
 //===============================================================================\\
 client.on("guildCreate", guild => {
-  client.channels.cache.get("898680185170325616").send(`
+  client.channels.cache.get("902411860282835015").send(`
 <:join:902312806618116096> **Join Server**: ${client.guilds.cache.size}
 <:Servers:902312906618724372> **Server Name**: ${guild.name}
 <:owner:902312748371820594> **Server Owner**: ${guild.owner}
