@@ -37,8 +37,8 @@ client.on("guildDelete", guild => {
 <:left:902312846963114034> **Lift Server**: ${client.guilds.cache.size}
 <:Servers:902312906618724372> **Server Name**: ${guild.name}
 <:owner:902312748371820594> **Server Owner**: ${guild.owner}
-<:IconID:897811847426756650> **Owner Id**: ${guild.owner.id}
-<:IconID:897811847426756650> **Server Id**: ${guild.id}
+<:iduser:902312780009459733> **Owner Id**: ${guild.owner.id}
+<:iduser:902312780009459733> **Server Id**: ${guild.id}
 <:Users:902312879838068796> **Member Count**: ${guild.memberCount}`);
 });
 //================================================================================\\
