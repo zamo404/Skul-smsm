@@ -23,7 +23,7 @@ client.on("ready", async () => {
 });
 //===============================================================================\\
 client.on("guildCreate", guild => {
-  client.channels.cache.get("902411860282835015").send(`
+  client.channels.cache.get("903938570249711656").send(`
 <:join:902312806618116096> **Join Server**: ${client.guilds.cache.size}
 <:Servers:902312906618724372> **Server Name**: ${guild.name}
 <:owner:902312748371820594> **Server Owner**: ${guild.owner}
@@ -32,7 +32,7 @@ client.on("guildCreate", guild => {
 });
 ////////////////////////////////////////////
 client.on("guildDelete", guild => {
-  client.channels.cache.get("902411860282835015").send(`
+  client.channels.cache.get("903938570249711656").send(`
 <:left:902312846963114034> **Lift Server**: ${client.guilds.cache.size}
 <:Servers:902312906618724372> **Server Name**: ${guild.name}
 <:owner:902312748371820594> **Server Owner**: ${guild.owner}
@@ -262,8 +262,8 @@ client.on("message", async message => {
 });
 //===============================================================================\\
 client.on('ready', async() => {
-        client.channels.cache.get('898681102351335468').send("Hello Im Online <a:logserver:891321228537782313>")
-        client.channels.cache.get('894710155994873886').join()
+        client.channels.cache.get('903900364363956235').send("Hello Im Online <a:logserver:891321228537782313>")
+        client.channels.cache.get('903910230444871680').join()
         console.log("Hello Im Online")
 });
 //===============================================================================\\
