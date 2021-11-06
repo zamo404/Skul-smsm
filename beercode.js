@@ -220,7 +220,7 @@ client.on("message", message => {
 > **Jcoinflip(cf)** - **Jslots(s)** - **Jfish(f)**
 :books: **If you don't know how to use a bot or game Commands type (**__Jhowplay__**)**
 🔗 ┇**Link**
-[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)
+[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)-[Vote](https://top.gg/bot/518848646016401434/vote)
 `);
     message.channel.send(embed);
   }
