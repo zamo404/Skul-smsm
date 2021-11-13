@@ -18,7 +18,7 @@ require("./util/eventLoader.js")(client);
 //===============================================================================\\
 client.on("ready", async () => {
   client.user.setActivity(`Jhelp|Under Development|Server,${client.guilds.cache.size}`, {
-    type: "STEAMING"
+    type: "PLAYING"
   });
 });
 //===============================================================================\\
