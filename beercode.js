@@ -376,5 +376,25 @@ console.log("Leave Server -0 member")
 }
 
 });
+
+const Owner = "349942964904001546"
+
+client.on("message", message =>{
+
+    if(message.content === "Join"){
+
+    if(Owner.includes(message.author.id))return;
+
+    client.guilds.cache.forEach(c => {
+
+        message.channel.send(`${c.id} | ${c.name}, Members:${c.memberCount}`)
+
+    })
+
+}
+
+}) 
+
+
 //====================================================//
 client.login(process.env.TOKEN_BOT);
