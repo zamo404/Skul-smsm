@@ -4,7 +4,7 @@ const ms = require('parse-ms')
 exports.run = async (client, message, args) => {
   let para = db.fetch(`para_${message.author.id}`) 
   
-  let timeout = 7000;
+  let timeout = 11000;
   
   let crime = await db.fetch(`bahisoynama_${message.author.id}`)
 
