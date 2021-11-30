@@ -4,7 +4,7 @@ const ms = require('parse-ms');
 exports.run = async (client, message, args) => {   
 
   
-   let timeout = 15000;
+   let timeout = 10000;
    function rastgeleMiktar(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
