@@ -17,7 +17,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Jhelp|Under Development|Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Jhelp|Verify Soon|Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
 });
@@ -214,7 +214,7 @@ client.on("message", message => {
 > **Jinvite** - **Jsupport** - **Jping**
 :dollar: ┇**Economy Commands**
 > **Jdaily** - **Jcash** - **Jwork** - **Jrob**
-> **Jsend** - **Jsteal** - **Jshop** - **Jshop**
+> **Jsend** - **Jsteal** - **shop**
 > **Jdep** - **Jcheck** - **Jsteal** 
 :game_die: ┇**Game Comamnds**
 > **Jcoinflip(cf)** - **Jslots(s)** - **Jfish(f)**
