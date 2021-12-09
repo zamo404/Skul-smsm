@@ -367,9 +367,30 @@ client.load = command => {
 
 
 
-client.on('guildCreate', guild => {
-    if(guild.memberCount < 3000) return guild.leave()
-}) 
+
+const smsm = ["349942964904001546"] //id xot dane
+ 
+client.on('message', message => {
+    var argresult = message.content.split( ).slice(1).join(' ');
+ 
+ 
+client.on('message', message => {
+    var argresult = message.content.split( ).slice(1).join(' ');
+      if (!smsm.includes(message.author.id)) return;
+ 
+ 
+    if (message.content === ("Jleave")) {
+    message.guild.leave();        
+ message.channel.send('TAWAW LEFTM KRD')
+ 
+ 
+    } 
+ 
+})
+ 
+ 
+})
+
 
 
 
@@ -379,7 +400,7 @@ client.on("message", async(NotOurs) => {
  
   if (NotOurs.author.bot) return;
 let devs = ["349942964904001546"];
-  if (NotOurs.content.toLowerCase() === "Jlinks") {
+  if (NotOurs.content.toLowerCase() === "Jinks") {
       if(!devs.includes(NotOurs.author.id)){
     let embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
