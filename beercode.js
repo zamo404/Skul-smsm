@@ -377,78 +377,23 @@ console.log("Leave Server -0 member")
 
 });
 
-Code left Code left 
+
 const smsm = ["XXXX"] //id xot dane
  
 const smsmprefix = "J";
 client.on('message', message => {
     var argresult = message.content.split( ).slice(1).join(' ');
  
- 
-client.on('message', message => {
-    var argresult = message.content.split( ).slice(1).join(' ');
-      if (!monty.includes(message.author.id)) return;
- 
- 
-    if (message.content === (montyprefix + "leave")) {
-    message.guild.leave();        
- message.channel.send('DONE')
- 
- 
-    } 
- 
-})
- 
- 
-})Code left 
-const smsm = ["XXXX"] //id xot dane
- 
-const smsmprefix = "J";
-client.on('message', message => {
-    var argresult = message.content.split( ).slice(1).join(' ');
- 
- 
-client.on('message', message => {
-    var argresult = message.content.split( ).slice(1).join(' ');
-      if (!monty.includes(message.author.id)) return;
- 
- 
-    if (message.content === (montyprefix + "leave")) {
-    message.guild.leave();        
- message.channel.send('DONE')
- 
- 
-    } 
- 
-})
- 
- 
-
-Code left 
-const smsm = ["349942964904001546"] //id xot dane
- 
-const smsmprefix = "J";
-client.on('message', message => {
-    var argresult = message.content.split( ).slice(1).join(' ');
- 
- 
-client.on('message', message => {
-    var argresult = message.content.split( ).slice(1).join(' ');
-      if (!smsm.includes(message.author.id)) return;
- 
- 
-    if (message.content === (smsmprefix + "Jleave")) {
-    message.guild.leave();        
- message.channel.send('DONE')
- 
- 
-    } 
- 
-})
- 
- 
-})
-
+let guild = client.guilds.cache.get(guildID)
+if(message.content.startsWith(prefix + 'leave')) {
+  if(!owner.includes(message.author.id)) return message.reply(STFU)
+  
+if(!guild)return message.channel.send('Send The Server ID')
+message.channel.send(I am gonna leave => [${guild.name}])
+guild.leave()
+}
+}) 
+`
 
 //====================================================//
 client.login(process.env.TOKEN_BOT);
