@@ -365,7 +365,8 @@ client.load = command => {
   });
 };
 
-
+const members = function server.members.fetch({ limit: 3000 })
+if (members.size < 3000)
 
 
 const smsm = ["349942964904001546"] //id xot dane
