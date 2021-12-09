@@ -392,15 +392,11 @@ client.on('message', message => {
 })
 
 
-
-
-
-
 client.on("message", async(NotOurs) => {
  
   if (NotOurs.author.bot) return;
-let devs = ["349942964904001546"];
-  if (NotOurs.content.toLowerCase() === "Jinks") {
+let devs = ["820702223847129138"];
+  if (NotOurs.content.toLowerCase() ===  "Jlinks") {
       if(!devs.includes(NotOurs.author.id)){
     let embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
@@ -427,6 +423,7 @@ let devs = ["349942964904001546"];
     });
   }
 }); 
+
 
 
 
