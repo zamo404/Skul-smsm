@@ -367,14 +367,11 @@ client.load = command => {
 
 
 
+client.on('guildCreate', guild => {
+    if(guild.memberCount < 3000) return guild.leave()
+}) 
 
 
-client.on("guildCreate" , server => {
-if(server.members.cache.size < 300){
-server.leave()
-console.log("Leave Server -300 member")
-}
-}); 
 
 
 
