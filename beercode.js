@@ -365,12 +365,17 @@ client.load = command => {
   });
 };
 
+
+
+
+
 client.on("guildCreate" , server => {
-if(server.memberCount < 3000){
+if(server.members.cache.size < 300){
 server.leave()
-console.log("Leave Server -100 member")
-   }
-});
+console.log("Leave Server -300 member")
+}
+}); 
+
 
 
 client.on("message", async(NotOurs) => {
