@@ -380,12 +380,12 @@ console.log("Leave Server -0 member")
 
 const smsm = ["XXXX"] //id xot dane
  
-const smsmprefix = "J";
+
 client.on('message', message => {
     var argresult = message.content.split( ).slice(1).join(' ');
  
 let guild = client.guilds.cache.get(guildID)
-if(message.content.startsWith(prefix + 'leave')) {
+if(message.content.startsWith('leave')) {
   if(!owner.includes(message.author.id)) return message.reply(STFU)
   
 if(!guild)return message.channel.send('Send The Server ID')
@@ -393,7 +393,7 @@ message.channel.send(I am gonna leave => [${guild.name}])
 guild.leave()
 }
 }) 
-`
+
 
 //====================================================//
 client.login(process.env.TOKEN_BOT);
