@@ -16,15 +16,13 @@ const log = message => {
 require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
-client.on("ready", () => {
-    console.log(`Im' ${client.user.username}`)
-    client.user.setPresence({
-        status: 'online', //idle online dnd
-        activity: {
-            name: `Verify Soon`,
-            type: "STREAMING", url: "https://www.twitch.tv/m0riano"
-        }
-    })
+client.on("ready", async () => {
+  client.user.setActivity(
+    `Jhelp|Verify Soon|Server,${client.guilds.cache.size}`,
+    {
+      type: "PLAYING"
+    }
+  );
 //===============================================================================\\
 client.on("guildCreate", guild => {
   client.channels.cache.get("903938570249711656").send(`
