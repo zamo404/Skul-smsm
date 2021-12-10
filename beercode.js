@@ -378,12 +378,10 @@ client.load = command => {
   });
 };
 
-client.on("guildCreate" , server => {
-if(server.memberCount < 800){
-server.leave()
-console.log("Leave Server -800 member")
-}
-});
+client.on('guildCreate', guild => {
+    if(guild.memberCount < 1000) return guild.leave()
+}) 
+
 
 //====================================================//
 client.login(process.env.TOKEN_BOT);
