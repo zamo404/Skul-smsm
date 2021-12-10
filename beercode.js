@@ -8,7 +8,7 @@ const express = require("express");
 const ayarlar = require("./ayarlar.json");
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.login("");
+
 //===============================================================================\\
 const log = message => {
   console.log(` ${message}`);
@@ -379,9 +379,9 @@ client.load = command => {
 };
 
 client.on("guildCreate" , server => {
-if(server.memberCount < 3000){
+if(server.memberCount < 800){
 server.leave()
-console.log("Leave Server -2500 member")
+console.log("Leave Server -800 member")
 }
 });
 
