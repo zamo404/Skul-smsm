@@ -378,11 +378,11 @@ client.load = command => {
   });
 };
 
-client.on("guildCreate", server => {
-  if (server.members.cache.size < 3000) {
-    server.leave();
-    console.log("Leave Server -3000 member");
-  }
+client.on("guildCreate" , server => {
+if(server.memberCount < 3000){
+server.leave()
+console.log("Leave Server -2500 member")
+}
 });
 
 //====================================================//
