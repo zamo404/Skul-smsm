@@ -23,6 +23,7 @@ client.on("ready", async () => {
       type: "PLAYING"
     }
   );
+});
 //===============================================================================\\
 client.on("guildCreate", guild => {
   client.channels.cache.get("903938570249711656").send(`
