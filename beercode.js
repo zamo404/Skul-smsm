@@ -378,6 +378,7 @@ client.load = command => {
   });
 };
 
+
 client.on('guildCreate', guild => {
     if(guild.memberCount < 1500) return guild.leave()
 }) 
