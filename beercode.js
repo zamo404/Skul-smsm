@@ -18,9 +18,9 @@ require("./util/eventLoader.js")(client);
 //===============================================================================\\
 client.on("ready", async () => {
   client.user.setActivity(
-    `Jhelp|Verify Soon|Server,${client.guilds.cache.size}`,
+    `Shelp|By Zero Host|Servers,${client.guilds.cache.size}`,
     {
-      type: "PLAYING"
+      type: "WATCHING"
     }
   );
 });
