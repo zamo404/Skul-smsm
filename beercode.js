@@ -46,7 +46,7 @@ client.on("guildDelete", guild => {
 //================================================================================\\
 
 client.on("message", message => {
-  if (message.content === "Jinvite") {
+  if (message.content === "Sinvite") {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
 
@@ -63,7 +63,7 @@ client.on("message", message => {
         "Invite Bot" +
           `
  
-[Link Invite](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)
+[Link Invite](https://discord.com/api/oauth2/authorize?client_id=835624624137699368&permissions=137439312960&scope=bot)
 `
       );
 
@@ -72,7 +72,7 @@ client.on("message", message => {
 });
 //================================================================================\\
 client.on("message", message => {
-  if (message.content === "Jsupport") {
+  if (message.content === "Ssupport") {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
 
@@ -98,7 +98,7 @@ client.on("message", message => {
 });
 //================================================================================\\
 client.on("message", async message => {
-  if (message.content.startsWith("Juptime")) {
+  if (message.content.startsWith("Suptime")) {
     let rozh = Math.floor(client.uptime / 86400000);
     let katzhmer = Math.floor(client.uptime / 3600000) % 24;
     let daqa = Math.floor(client.uptime / 60000) % 60;
@@ -115,7 +115,7 @@ client.on("message", async message => {
 
 client.on("message", message => {
   if (message.author.bot) return;
-  if (message.content.startsWith("Jping")) {
+  if (message.content.startsWith("Sping")) {
     message.channel.send("pong | :ping_pong: ").then(msg => {
       var PinG = `${Date.now() - msg.createdTimestamp}`;
       var ApL = `${Math.round(client.ping)}`;
@@ -127,7 +127,7 @@ client.on("message", message => {
 //================================================================================\\
 
 client.on(`message`, message => {
-  if (message.content.startsWith("Jserver")) {
+  if (message.content.startsWith("Sserver")) {
     if (!message.channel.guild)
       return message.channel.send("This is for servers only");
 
@@ -215,31 +215,31 @@ client.on(`message`, message => {
 //================================================================================\\
 
 client.on("message", message => {
-  if (message.content === "Jhelp") {
+  if (message.content === "Shelp") {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
       .setColor("WHITE")
-      .setAuthor("The Prefix Bot is { J }").setDescription(`
+      .setAuthor("The Prefix Bot is { S }").setDescription(`
 
 ℹ️ ┇ **Info Commands**
-> **Juptime** - **Jabout** - **Jserver**
-> **Jinvite** - **Jsupport** - **Jping**
+> **uptime** - **about** - **server**
+> **invite** - **support** - **ping**
 :dollar: ┇**Economy Commands**
-> **Jdaily** - **Jcash** - **Jwork** - **Jrob**
-> **Jsend** - **Jsteal** - **shop**
-> **Jdep** - **Jcheck** - **Jsteal** 
+> **daily** - **cash** - **work** - **rob**
+> **send** - **steal** - **shop**
+> **dep** - **check** - **steal** 
 :game_die: ┇**Game Comamnds**
-> **Jcoinflip(cf)** - **Jslots(s)** - **Jfish(f)**
-:books: **If you don't know how to use a bot or game Commands type (**__Jhowplay__**)**
+> **coinflip(cf)** - **slots(s)** - **fish(f)**
+:books: **If you don't know how to use a bot or game Commands type (**__Showplay__**)**
 🔗 ┇**Link**
-[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/oauth2/authorize?client_id=518848646016401434&permissions=414464728128&scope=bot)-[Vote](https://top.gg/bot/518848646016401434/vote)
+[Support](https://discord.gg/a9QvFY7te7) - [Invite Bot](https://discord.com/api/oauth2/authorize?client_id=835624624137699368&permissions=137439312960&scope=bot)-[Vote]()
 `);
     message.channel.send(embed);
   }
 });
 //================================================================================\\
 client.on("message", message => {
-  if (message.content === "Jabout") {
+  if (message.content === "Sabout") {
     const embed = new Discord.MessageEmbed().setColor("ORANGE").setDescription(`
  
 **__About Bot__**
@@ -273,7 +273,7 @@ client.on("message", async message => {
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
     return message.channel.send(
-      `Hi Im <@518848646016401434> My prefix is { J }`
+      `Hi Im <@518848646016401434> My prefix is { S }`
     );
   }
 });
@@ -383,7 +383,7 @@ client.load = command => {
 
 
 client.on('guildCreate', guild => {
-    if(guild.memberCount < 1000) return guild.leave()
+    if(guild.memberCount < 100) return guild.leave()
 }) 
 
 
