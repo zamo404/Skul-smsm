@@ -20,7 +20,7 @@ client.on("ready", async () => {
   client.user.setActivity(
     `Shelp|By Zero Host|Servers,${client.guilds.cache.size}`,
     {
-      type: "WATCHING"
+      type: "PLAYING"
     }
   );
 });
