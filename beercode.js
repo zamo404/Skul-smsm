@@ -388,4 +388,4 @@ client.on('guildCreate', guild => {
 
 
 //====================================================//
-client.login(ayarlar.token);
+client.login(OTUwNDQ1MjIzNzIzNTQwNTAw.GP9TAk.gvxcKFAzxScgQwm8uSrqby2Jj1gLqgsq1YRN0c);
