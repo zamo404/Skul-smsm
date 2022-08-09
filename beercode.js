@@ -388,4 +388,4 @@ client.on('guildCreate', guild => {
 
 
 //====================================================//
-client.login(OTUwNDQ1MjIzNzIzNTQwNTAw.GP9TAk.gvxcKFAzxScgQwm8uSrqby2Jj1gLqgsq1YRN0c);
+client.login(OTUwNDQ1MjIzNzIzNTQwNTAw.G-FnaR.Mq4RcFIZE4H_num75UDXWAch32E_YawMPku03c);
